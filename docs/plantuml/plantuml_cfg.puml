@@ -1,0 +1,102 @@
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' colour  decoder: https://www.google.com/search?q=hex+color+picker&oq=hex+col&aqs=chrome.0.0l2j69i57j0l3.1975j0j7&sourceid=chrome&ie=UTF-8
+' http://plantuml.com/skinparam
+
+skinparam backgroundColor white
+
+skinparam note {
+    BackgroundColor #F1FFFF
+    BorderColor #2980B9
+}
+
+skinparam activity {
+    BackgroundColor #BDE3FF
+    ArrowColor #2980B9
+    BorderColor #2980B9
+    StartColor #227BC6
+    EndColor #227BC6
+    BarColor #227BC6
+}
+
+skinparam sequence {
+    ArrowColor  #2980B9
+    DividerBackgroundColor  #BDE3FF
+    GroupBackgroundColor    #BDE3FF
+    LifeLineBackgroundColor white
+    LifeLineBorderColor #2980B9
+    ParticipantBackgroundColor  #BDE3FF
+    ParticipantBorderColor  #2980B9
+    BoxLineColor    #2980B9
+    BoxBackgroundColor  #DDDDDD
+}
+
+skinparam componentBackgroundColor    #BDE3FF
+skinparam component {
+    skinparam componentArrowColor #A80036
+    skinparam BorderColor    #A80036
+    skinparam InterfaceBackgroundColor   #BDE3FF
+    skinparam InterfaceBorderColor   #A80036
+}
+
+
+'for some reason if we put BackgroundColor inside {} it does not work?
+skinparam stateBackgroundColor #BDE3FF
+skinparam state {
+    skinparam BorderColor #2980B9
+    skinparam ArrowColor #2980B9
+    skinparam StartColor black
+    skinparam EndColor   black
+}
+
+
+skinparam stereotype {                  
+    skinparam CBackgroundColor  #ADD1B2
+    skinparam ABackgroundColor  #A9DCDF
+    skinparam IBackgroundColor  #B4A7E5
+    skinparam EBackgroundColor  #EB937F
+}
+
+'for some reason if we put BackgroundColor inside {} it does not work?
+skinparam actorBackgroundColor #BDE3FF
+skinparam actor {
+    skinparam BorderColor    #A80036
+}
+
+skinparam usecase {
+    skinparam ArrowColor   #A80036
+    skinparam BorderColor  #A80036
+}
+
+skinparam class {
+    skinparam ArrowColor #A80036
+    skinparam BackgroundColor    #BDE3FF
+    skinparam BorderColor    #A80036
+}
+
+
+skinparam object {
+    skinparam ArrowColor    #A80036
+    skinparam BackgroundColor   #BDE3FF
+    skinparam BorderColor   #A80036
+}
+
+
+skinparam packageBackgroundColor  #white
+skinparam agentBackgroundColor  #BDE3FF
+skinparam artifactBackgroundColor  #BDE3FF
+skinparam boundaryBackgroundColor  #BDE3FF
+skinparam cardBackgroundColor  #BDE3FF
+skinparam cloudBackgroundColor  #BDE3FF
+skinparam controlBackgroundColor  #BDE3FF
+skinparam databaseBackgroundColor  #BDE3FF
+skinparam entityBackgroundColor  #BDE3FF
+skinparam fileBackgroundColor  #BDE3FF
+skinparam folderBackgroundColor  #BDE3FF
+skinparam frameBackgroundColor  #BDE3FF
+skinparam interfaceBackgroundColor  #BDE3FF
+skinparam nodeBackgroundColor  #BDE3FF
+skinparam queueBackgroundColor  #BDE3FF
+skinparam stackBackgroundColor  #BDE3FF
+skinparam rectangleBackgroundColor  #BDE3FF
+skinparam storageBackgroundColor  #BDE3FF
+skinparam usecaseBackgroundColor #BDE3FF
