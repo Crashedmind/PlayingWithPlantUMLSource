@@ -91,10 +91,10 @@ html_context = {
      }
 
 # Tell sphinx what the primary language being documented is.
-primary_domain = 'cpp'
+primary_domain = 'rst'
 
 # Tell sphinx what the pygments highlight language should be.
-highlight_language = 'cpp'
+#highlight_language = 'cpp'
 
 
 #List any ToDos https://www.sphinx-doc.org/en/master/usage/extensions/todo.html

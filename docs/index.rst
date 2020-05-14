@@ -31,7 +31,7 @@ Welcome to Playing with PlantUML!
    
 .. toctree::
    :maxdepth: 2
-   :caption: Other Features
+   :caption: OtherFeatures
       
    todo   
    
