@@ -1,0 +1,61 @@
+@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+'. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+'. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+'. Ivan is an IT guy who looks after the server. 
+'. They connect to the network hub, and via a firewall to the Internet.
+
+
+' Users
+
+osa_user_green_developer(Mary, "Mary", "Product team", "Developer")
+osa_user_green_operations(Ivan, "Ivan", "IT Team", "Server Admin")
+osa_user_green_business_manager(Bob, "Bob", "Accounts team", "Manager")
+
+' Devices
+osa_desktop(pc, "192.168.1.10", "Windows 10", "PC")
+osa_laptop(mac, "192.168.1.12", "Mac", "Mac")
+osa_iPhone(iphone, "Dynamic IP", "iPhone 11", "Phone")
+osa_iPhone(android, "Dynamic IP", "Android 10", "Phone")
+osa_server(server, "192.168.1.100", "Ubuntu Server 20.04 LTS", "Server")
+
+' Network
+osa_device_wireless_router(wifiAP, "192.168.1.1", "Network")
+osa_hub(hub, "Office hub", "Hub")
+osa_firewall(firewall, "51.37.24.103", "Network")
+osa_cloud(cloud, "Internet", "Network")
+
+
+Mary --> pc: source code
+Mary --> android: social media
+
+Bob --> mac: financial info
+Bob --> iphone: phone calls
+
+
+Ivan --> server: configuration
+
+iphone --> wifiAP
+android --> wifiAP
+wifiAP --> hub
+
+server --> hub
+mac --> hub
+pc --> hub
+
+
+hub --> firewall
+
+firewall --> cloud
+
+@enduml
+
+
+

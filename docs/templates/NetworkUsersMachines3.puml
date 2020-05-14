@@ -1,0 +1,31 @@
+@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+
+' Users
+osa_user_green_developer(osa_user_green_developer, "label", "tech")
+osa_user_green_operations(osa_user_green_operations, "label", "tech")
+osa_user_green_business_manager(osa_user_green_business_manager, "label", "tech")
+
+' Devices
+osa_desktop(osa_desktop, "label", "tech")
+osa_laptop(osa_laptop, "label", "tech")
+osa_iPhone(osa_iPhone, "label", "tech")
+osa_server(osa_server, "label", "tech")
+
+' Network
+osa_device_wireless_router(osa_device_wireless_router, "label", "tech")
+osa_hub(osa_hub, "label", "tech")
+osa_firewall(osa_firewall, "label", "tech")
+osa_cloud(osa_cloud, "label", "tech")
+
+
+@enduml
+
+

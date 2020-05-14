@@ -1,0 +1,12 @@
+@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+listsprites
+
+@enduml

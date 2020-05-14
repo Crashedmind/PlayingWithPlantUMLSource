@@ -1,0 +1,32 @@
+@startuml
+' for OSA PUMLENTITY
+!include <aws/Common> 
+!include <awslib/AWSCommon>
+!include <awslib/General/all>
+!include <awslib/NetworkingAndContentDelivery/all>
+'!include <osa/firewall/firewall.puml> 
+
+Client(Client1, "Bob", "Apple Mac") 
+Client(Client2, "Mary", "Windows 10") 
+MobileClient(MobileClient1, "Chris", "Android Phone") 
+MobileClient(MobileClient2, "Mary", "Apple Tablet") 
+TraditionalServer(TraditionalServer1, "Server", "All info lives here")
+VPCRouter(VPCRouter, "Router", "sasfd")
+'GenericFirewall(VPCRouter, "Router", "sasfd") - not working
+InternetGateway(InternetGateway, "GateWay", "Internet Access")
+
+'FIREWALL(FIREWALL1)
+
+Client1 -up-> VPCRouter
+Client2 -up-> VPCRouter
+MobileClient1 -up-> VPCRouter
+MobileClient2 -up-> VPCRouter
+TraditionalServer1 -up-> VPCRouter
+VPCRouter -up-> InternetGateway
+
+'VPCRouter -up-> FIREWALL1
+'FIREWALL1 -up-> InternetGateway
+
+
+@enduml
+
