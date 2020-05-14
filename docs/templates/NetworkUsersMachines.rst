@@ -297,8 +297,11 @@ Explore
 8. Conclusion
 -------------------------------------------------------------------------------
 
-TODO
 
-TODO: Add todo keyword to gather all todos
+.. todo::
 
+    Write up Conclusion
 
+.. todo::
+
+    autogenerate online code links via script doing searchNreplace with plantuml PTE output
