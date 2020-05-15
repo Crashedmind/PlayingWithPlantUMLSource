@@ -29,6 +29,7 @@ Welcome to Playing with PlantUML!
    :caption: Part 1
    NetworkUsersMachines/NetworkUsersMachines
    PassSpriteAsParameter/PassSpriteAsParameter
+   GenerateDiagrams/GenerateDiagrams
    
    :caption: ShowCase
       

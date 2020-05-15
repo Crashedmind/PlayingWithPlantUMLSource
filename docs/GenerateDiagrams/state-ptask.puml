@@ -1,0 +1,80 @@
+' https://github.com/ebu/OSCIED/blob/7eebadfef2a47c55db0cdc1a2e4c653a613e27ec/docs/david/uml/state-ptask.txt
+@startuml
+
+skinparam state {
+    FontColor          white
+    AttributeFontColor white
+    FontSize           17
+    AttributeFontSize  15
+    AttributeFontname  Droid Sans Mono
+    BackgroundColor    #527BC6
+    BorderColor        black
+    ArrowColor         #222266
+}
+
+
+
+[*] -right-> PENDING
+PENDING -right-> STARTED
+STARTED -down-> PROGRESS
+PROGRESS -right-> FAILURE
+PROGRESS -down-> REVOKED : <b> Revoked</b>\nby user
+PROGRESS -left-> SUCCESS
+FAILURE --> [*]
+REVOKED --> [*]
+SUCCESS --> [*]
+
+PENDING : <b>statistic attribute</b>
+PENDING : add_date  2013-01-06 05:01
+PENDING : <b>task state metadata</b>
+
+STARTED : <b>statistic attribute</b>
+STARTED : add_date  2013-01-06 05:01
+STARTED : <b>task state metadata</b>
+STARTED : pid       <i>of worker</i>
+STARTED : hostname  <i>of worker</i>
+
+PROGRESS : <b>statistic attribute</b>
+PROGRESS : add_date        2013-01-06 05:01
+PROGRESS : <b>task state metadata</b>
+PROGRESS : start_date      2013-01-06 05:02
+PROGRESS : elapsed_time    00:15:18
+PROGRESS : eta_time        00:03:12
+PROGRESS : media_size      23729373055
+PROGRESS : publish_size    18874368000
+PROGRESS : percent         80
+
+SUCCESS : <b>statistic attribute</b>
+SUCCESS : add_date      2013-01-06 05:01
+SUCCESS : <b>task state metadata</b>
+SUCCESS : result {
+SUCCESS : start_date    2013-01-06 05:02
+SUCCESS : elapsed_time  00:18:30
+SUCCESS : eta_time      <b>00:00:00</b>
+SUCCESS : media_size    23729373055
+SUCCESS : publish_size  23729373055
+SUCCESS : percent       <b>100</b>
+SUCCESS : hostname      publisher-0
+SUCCESS : pid           18307
+SUCCESS : }
+
+
+RETRY : <b>statistic attribute</b>
+RETRY : add_date   2013-01-06 05:01
+RETRY : <b>task state metadata</b>
+RETRY : result     <i>exception</i>
+RETRY : traceback  <i>stack trace</i>
+
+FAILURE : <b>statistic attribute</b>
+FAILURE : add_date   2013-01-06 05:01
+FAILURE : error         (=result)
+FAILURE : error_details (...)
+FAILURE : <b>task state metadata</b>
+FAILURE : result     <i>exception</i>
+FAILURE : traceback  <i>stack trace</i>
+
+REVOKED : <b>statistic attribute</b>
+REVOKED : add_date  2013-01-06 05:01
+REVOKED : <b>task state metadata</b>
+
+@enduml
