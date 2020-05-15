@@ -27,8 +27,8 @@ Welcome to Playing with PlantUML!
    principles
 
    :caption: Part 1
-   templates/NetworkUsersMachines
-   templates/PassSpriteAsParameter
+   NetworkUsersMachines/NetworkUsersMachines
+   PassSpriteAsParameter/PassSpriteAsParameter
    
    :caption: ShowCase
       
