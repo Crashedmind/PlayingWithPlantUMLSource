@@ -24,12 +24,14 @@ Welcome to Playing with PlantUML!
    :numbered:
    :caption: Introduction
 
-   principles
+   introduction
+
+   ShowCase/showcase
    NetworkUsersMachines/NetworkUsersMachines
    PassSpriteAsParameter/PassSpriteAsParameter
    GenerateDiagrams/GenerateDiagrams
    GenerateDiagrams/GenerateDiagramsLambda
-    ShowCase/showcase
+
 
 
    
