@@ -27,22 +27,23 @@ Welcome to Playing with PlantUML!
    introduction
 
    ShowCase/showcase
-   NetworkUsersMachines/NetworkUsersMachines
+
    
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Using
+   :caption: Stdlib
 
-   C4/C4
+   NetworkUsersMachines/NetworkUsersMachines
    Stdlib/StdlibUnderTheHood
-   Stdlib/ContributingToStdlib
    PassSpriteAsParameter/PassSpriteAsParameter
+   C4/C4
+   Stdlib/ContributingToStdlib
 
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Building
+   :caption: Running PlantUML
    
    GenerateDiagrams/GenerateDiagrams
    GenerateDiagrams/GenerateDiagramsLambda
