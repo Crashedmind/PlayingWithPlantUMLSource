@@ -28,6 +28,8 @@ Welcome to Playing with PlantUML!
 
    ShowCase/showcase
    NetworkUsersMachines/NetworkUsersMachines
+   C4/C4
+   StdlibUnderTheHood
    PassSpriteAsParameter/PassSpriteAsParameter
    GenerateDiagrams/GenerateDiagrams
    GenerateDiagrams/GenerateDiagramsLambda
