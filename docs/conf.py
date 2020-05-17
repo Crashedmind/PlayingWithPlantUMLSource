@@ -20,6 +20,8 @@
 project = 'Playing with PlantUML'
 
 
+
+
 # Setup the breathe extension
 breathe_projects = {
     "docdac": "./doxyoutput/xml"
@@ -82,6 +84,8 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 html_logo = "./plantumllogo.png"
+
+html_favicon = "./plantumllogo.png"
 
 # This fixes ReadTheDocs Theme Bug where table text does not auto wrap for long lines.
 # https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html 

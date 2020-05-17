@@ -92,7 +92,10 @@ Example Workflow
 
 This generates png and svg diagrams and commits them to your repository.
 
-'**.puml' #matches zero or more of any character
+.. code::
+
+    '**.puml' #matches zero or more of any character
+
 
 .. literalinclude:: ./workflow.yml
     :linenos: 
@@ -103,8 +106,6 @@ Our Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We made some changes relative to the example provided - highlighted below
-
-'**.puml' #matches zero or more of any character
 
 .. literalinclude:: ./PlantumlGenerate.yml
     :linenos: 
@@ -154,7 +155,7 @@ Conclusion
 
     Write up Conclusion
 
-.. todo::
+
 
 
     

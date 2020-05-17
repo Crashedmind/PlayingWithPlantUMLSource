@@ -6,15 +6,158 @@ Welcome to Playing with PlantUML!
 .. _PlantUML: https://www.plantuml.com/
 .. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
 
+
+
+.. include:: introduction.rst
+   :start-after: logo-begin-content
+   :end-before: logo-end-content
+
+
+.. _AgileModeling: https://masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/
+.. _AgileModelingBP: https://tdan.com/best-practices-for-agile-documentation/18936
+
+.. showcase-begin-content
+
+
+Imagine 
+===============================================================================
+
 .. tip ::
-    #. This is a "Postcard from the future" vision_ of the PlantUML user guide.
-    #. It gives an overview and details of a specific feature (Functions and Procedures) as an example.
-    #. The purpose is to elicit feedback on what we want, by presenting a vision_ of what we have in the future.
-    #. Once we know what we want, then we can start to phase it in via who/what/when...
-   
+
+    Imagine being able to 
+
+    #. share a model or diagram between all members of the team that they can all understand and contribute to and edit
+    #. draw diagrams like below automatically from a text description.
+    #. describe a system before you build it, when you're building it, and as you maintain it into the future - keeping the description and the system current and in sync.
+    #. maintain that text version in a source code repository beside the code for the system it is describing
+
+    Imagine having a diagramming tool that
+
+    #. fits with a developer workflow, and developers are comfortable using
+    #. enables **lightweight just-enough** AgileModeling_ in a way that meets AgileModelingBP_ 
+    #. fits with modern practices of Continuous Integration Continuous Delivery - and "everything as code" including diagrams.
+
+    Well that's what PlantUML gives you, and more...
+
+
+.. raw:: html
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <style>
+      div.gallery {
+      border: 1px solid #ccc;
+      }
+
+      div.gallery:hover {
+      border: 1px solid #777;
+      }
+
+      div.gallery img {
+      width: 100%;
+      height: auto;
+      }
+
+      div.desc {
+      padding: 15px;
+      text-align: center;
+      }
+
+      * {
+      box-sizing: border-box;
+      }
+
+      .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+      }
+
+      @media only screen and (max-width: 700px) {
+      .responsive {
+         width: 49.99999%;
+         margin: 6px 0;
+      }
+      }
+
+      @media only screen and (max-width: 500px) {
+      .responsive {
+         width: 100%;
+      }
+      }
+
+      .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+      </style>
+      </head>
+      <body>
 
 
 
+      <h3>Some Examples</h3>
+      
+      <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="networkusers.png">
+            <img src="networkusers.png" alt="Network Users" width="600" height="400">
+         </a>
+         <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+      </div>
+      </div>
+
+
+      <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="networkusers.png">
+            <img src="networkusers.png" alt="Network Users" width="600" height="400">
+         </a>
+         <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+      </div>
+      </div>
+
+      <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="networkusers.png">
+            <img src="networkusers.png" alt="Network Users" width="600" height="400">
+         </a>
+         <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+      </div>
+      </div>
+
+      <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="networkusers.png">
+            <img src="networkusers.png" alt="Network Users" width="600" height="400">
+         </a>
+         <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+      </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div style="padding:6px;">
+      <p>See more examples in Showcase and RealworldPlantuml</p>
+
+      </div>
+
+      </body>
+      </html>
+
+.. showcase-end-content
+
+
+About PlantUML
+===============================================================================
+
+.. todo::
+
+    ask @Arnaud to give history and context and his view of plantuml
+
+https://modeling-languages.com/interview-plantuml/
 
 .. comment
     Sphinx is expecting 3 spaces under toctree i.e. it does not work with 4
@@ -24,11 +167,9 @@ Welcome to Playing with PlantUML!
    :numbered:
    :caption: Introduction
 
-   introduction
+   AboutThisGuide
 
-   ShowCase/showcase
-
-   
+      
 .. toctree::
    :maxdepth: 2
    :numbered:   
@@ -56,20 +197,10 @@ Welcome to Playing with PlantUML!
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: API and developer reference
+   :caption: ToDo
 
    
    
       
    todo   
    
-Index
-==================
-
-* :ref:`genindex`
-
-
-
-
-
-
