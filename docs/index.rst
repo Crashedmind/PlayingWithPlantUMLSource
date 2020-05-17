@@ -199,9 +199,9 @@ Imagine
    :caption: Stdlib
 
    NetworkUsersMachines/NetworkUsersMachines
-   Stdlib/StdlibUnderTheHood
+   PlantUMLSpriteLibraries/PlantUMLSprites
    PassSpriteAsParameter/PassSpriteAsParameter
-   C4/C4
+
    Stdlib/ContributingToStdlib
 
 .. toctree::
@@ -211,11 +211,20 @@ Imagine
    
    GenerateDiagrams/GenerateDiagrams
    GenerateDiagrams/GenerateDiagramsLambda
+   
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: Example galleries
+
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Annex
+   
+   C4/C4
 
 .. toctree::
    :maxdepth: 2
