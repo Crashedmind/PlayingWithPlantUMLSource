@@ -152,12 +152,6 @@ Create Diagram with our Sprites
     :linenos:
    
 
-
-Create Sprites by converting Elastic icon libaries
-----------------------------------------------------
-
-See demo and details at https://github.com/Crashedmind/PlantUML-Elastic-icons
-
 Create Sprites by converting OSA icon libaries
 ----------------------------------------------------
 
@@ -184,32 +178,10 @@ Converting the icon set to PlantUML Sprites
 1. Download the `security architecture
    icons <http://www.opensecurityarchitecture.org/cms/library/icon-library>`__
    and extract them into a directory e.g. "osaicons".
-2. Configure and/or add styles to the ``puml.ini`` configuration file,
-   or create your own
-3. Run the ``puml.py`` script against your downloaded ``<ICONS_DIR>``
-   using your custom config
 
+.. todo ::
+    add info on a standard way to create sprites
 
-
-Commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-::
-
-
-    # Get OSA icons
-    mkdir ./OpenSecIcons/
-    mkdir ./OpenSecIcons/icons/
-    cd ./OpenSecIcons/icons/
-    wget http://www.opensecurityarchitecture.org/downloads/13_05_osa_icons_png.zip
-    unzip ./13_05_osa_icons_png.zip
-
-    # Get png to PlantUML conversion script
-    git clone git@github.com:milo-minderbinder/AWS-PlantUML.git
-    cd AWS-PlantUML
-
-    # Create PlantUML sprites from OSA png icons
-    python3 puml.py -c ./puml.ini ../OpenSecIcons/icons/ #icons output to ./dist/osa/
 
 
 
@@ -226,67 +198,8 @@ All Icons
 
 Below is what the icons look like - and the associated code.
 
-
-
-.. uml:: ./osa_sprites1.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites1.puml
-    :linenos:
-
-.. uml:: ./osa_sprites2.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites2.puml
-    :linenos:
-
-.. uml:: ./osa_sprites3.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites3.puml
-    :linenos:
-
-.. uml:: ./osa_sprites4.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites4.puml
-    :linenos:
-
-.. uml:: ./osa_sprites5.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites5.puml
-    :linenos:
-
-.. uml:: ./osa_sprites6.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites6.puml
-    :linenos:
-
-.. uml:: ./osa_sprites7.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites7.puml
-    :linenos:
-
-.. uml:: ./osa_sprites8.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites8.puml
-    :linenos:
-
-.. uml:: ./osa_sprites9.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites9.puml
-    :linenos:
-
-.. uml:: ./osa_sprites10.puml
-    :align: center
-
-.. literalinclude:: ./osa_sprites10.puml
-    :linenos:
+.. todo ::
+    add info on what osa icons look like
 
 
 PlantUML HyperLinks
