@@ -15,7 +15,8 @@ describe the **static** structure of a software system.
 Overall, it strives for clarity and communication of the story, and
 follows `Shneiderman's
 mantra <http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html>`__:
-> *Overview first, zoom and filter, then details-on-demand*
+   
+    *Overview first, zoom and filter, then details-on-demand*
 
 It is not formal UML e.g. the UML actor stickman is deliberately not
 used as it causes confusion between a person or a system.
@@ -23,18 +24,16 @@ used as it causes confusion between a person or a system.
 .. figure:: c4.png
    :alt: C4
 
-   C4
-The **4C's** are: 1. **Context**: A high-level diagram that sets the
-scene; including key system dependencies and people
-(actors/roles/personas/etc). `Context
-diagrams <https://en.wikipedia.org/wiki/System_context_diagram>`__ are
-standard in software engineering (even if not used often). 2.
-**Container**: A container diagram shows the high-level technology
-choices, how responsibilities are distributed across them and how the
-containers communicate. 3. **Component**: For each container, a
-component diagram lets you see the key logical components and their
-relationships. 4. **Classes (or Code)**: This is optional and is the
-lowest level of detail.
+The **4C's** are: 
+
+**Context**: A high-level diagram that sets the scene; including key system dependencies and people (actors/roles/personas/etc). `Context diagrams <https://en.wikipedia.org/wiki/System_context_diagram>`__ are standard in software engineering (even if not used often). 
+
+**Container**: A container diagram shows the high-level technology choices, how responsibilities are distributed across them and how the containers communicate. 3. 
+
+**Component**: For each container, a
+component diagram lets you see the key logical components and their relationships. 4. 
+
+**Classes (or Code)**: This is optional and is the lowest level of detail.
 
 CheatSheet
 ==========
@@ -103,19 +102,7 @@ https://leanpub.com/visualising-software-architecture.
 | |`Software Architecture for Developers - Volume 2 - Visualise, document and explore your software architecture <https://leanpub.com/visualising-software-architecture>`__|   | Software Architecture for Developers - Volume 2 - Visualise, document and explore your software architecture. (As at 2019-6-15 this book is 80% complete LAST UPDATED ON 2019-03-05). C4 is covered in this book.   |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-C4 Plantuml VSCode
-==================
 
-`C4-PlantUML <https://github.com/RicardoNiepel/C4-PlantUML>`__ combines
-the benefits of `PlantUML <http://plantuml.com/>`__ (an open source
-project that allows you to create UML diagrams automatically from a text
-description), and the C4 model for providing a simple way of describing
-and communicate software architectures. It also supports `C4 PlantUML
-Snippets for Visual Studio
-Code <https://github.com/RicardoNiepel/C4-PlantUML#snippets-for-visual-studio-code>`__
+.. todo ::
 
-.. |`Software Architecture for Developers: Volume 1 - Technical leadership and the balance with Agility <https://leanpub.com/b/software-architecture>`__| image:: swarchv1.png
-.. |`Software Architecture for Developers - Volume 2 - Visualise, document and explore your software architecture <https://leanpub.com/visualising-software-architecture>`__| image:: swarchv2.png
-
-
-
+    fix book cover titles

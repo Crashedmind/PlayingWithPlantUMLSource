@@ -201,6 +201,7 @@ Imagine
    NetworkUsersMachines/NetworkUsersMachines
    PlantUMLSpriteLibraries/PlantUMLSprites
    PassSpriteAsParameter/PassSpriteAsParameter
+   C4/C4Stdlib
 
    Stdlib/ContributingToStdlib
 
