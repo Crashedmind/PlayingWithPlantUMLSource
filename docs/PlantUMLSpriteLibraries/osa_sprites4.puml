@@ -1,0 +1,11 @@
+    !include <osa/ics/drive/drive.puml>
+    !include <osa/ics/plc/plc.puml>
+    !include <osa/ics/thermometer/thermometer.puml>
+    !include <osa/id/card/card.puml>
+    !include <osa/laptop/laptop.puml>
+
+    Drive: <$drive>
+    Plc: <$plc>
+    Thermometer: <$thermometer>
+    Card: <$card>
+    Laptop: <$laptop>

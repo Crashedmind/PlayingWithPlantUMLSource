@@ -1,0 +1,13 @@
+
+    !include <osa/user/large/group/group.puml>
+    !include <osa/users/blue/green/green.puml>
+    !include <osa/user/white/hat/hat.puml>
+    !include <osa/vpn/vpn.puml>
+    !include <osa/wireless/network/network.puml>
+
+    Group: <$group>
+    Green: <$green>
+    Hat: <$hat>
+    Vpn: <$vpn>
+    Network: <$network>
+    

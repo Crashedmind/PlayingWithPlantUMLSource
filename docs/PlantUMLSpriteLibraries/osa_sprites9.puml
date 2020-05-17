@@ -1,0 +1,11 @@
+    !include <osa/user/green/green.puml>
+    !include <osa/user/green/operations/operations.puml>
+    !include <osa/user/green/project/manager/manager.puml>
+    !include <osa/user/green/service/manager/manager.puml>
+    !include <osa/user/green/warning/warning.puml>
+
+    Green: <$green>
+    Operations: <$operations>
+    Manager: <$manager>
+    Manager: <$manager>
+    Warning: <$warning>

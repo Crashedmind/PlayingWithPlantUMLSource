@@ -1,0 +1,11 @@
+    !include <osa/lifecycle/lifecycle.puml>
+    !include <osa/lightning/lightning.puml>
+    !include <osa/media_flash/media_flash.puml>
+    !include <osa/media_optical/media_optical.puml>
+    !include <osa/media_tape/media_tape.puml>
+
+    Lifecycle: <$lifecycle>
+    Lightning: <$lightning>
+    Media_flash: <$media_flash>
+    Media_optical: <$media_optical>
+    Media_tape: <$media_tape>

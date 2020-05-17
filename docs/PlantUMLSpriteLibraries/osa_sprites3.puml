@@ -1,0 +1,11 @@
+    !include <osa/device_wireless_router/device_wireless_router.puml>
+    !include <osa/disposal/disposal.puml>
+    !include <osa/drive_optical/drive_optical.puml>
+    !include <osa/firewall/firewall.puml>
+    !include <osa/hub/hub.puml>
+
+    Device_wireless_router: <$device_wireless_router>
+    Disposal: <$disposal>
+    Drive_optical: <$drive_optical>
+    Firewall: <$firewall>
+    Hub: <$hub>

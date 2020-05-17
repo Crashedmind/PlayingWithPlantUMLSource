@@ -1,0 +1,11 @@
+    !include <osa/user/blue/tester/tester.puml>
+    !include <osa/user/blue/tie/tie.puml>
+    !include <osa/user/green/architect/architect.puml>
+    !include <osa/user/green/business/manager/manager.puml>
+    !include <osa/user/green/developer/developer.puml>
+
+    Tester: <$tester>
+    Tie: <$tie>
+    Architect: <$architect>
+    Manager: <$manager>
+    Developer: <$developer>

@@ -1,0 +1,50 @@
+' https://real-world-plantuml.com/umls/4724780511002624
+
+@startuml
+
+title performing I/O
+
+[*] --> Client
+Client: Process uri in Client
+
+Client -> Server : uri-data
+state Server {
+  [*] -> monitor
+  monitor: Server starts monitoring
+  monitor: Stops at end of Server life
+}
+
+Client -> Database: Client
+Database: database operations
+
+state runcommand {
+  Database -> command: Database
+  command -> find: query
+  command: send command to server
+
+  monitor -> select: server-data
+
+  find --> select
+  select: select process to find proper server
+  select --> find: Server
+
+  find --> query: server
+  query: encodes query and send to server
+  query: decodes result
+  query --> find: result
+
+}
+
+find -> Cursor: cursor-data
+Cursor: stores docs
+Cursor: retrieves new docs
+
+Cursor -> fetch: document
+fetch --> getmore
+getmore: encodes query and send to server
+getmore: decodes result
+getmore --> fetch: new-documents
+
+
+fetch -> [*]
+@enduml

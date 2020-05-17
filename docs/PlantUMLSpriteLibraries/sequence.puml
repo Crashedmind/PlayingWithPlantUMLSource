@@ -1,0 +1,42 @@
+' https://real-world-plantuml.com/umls/4606798564687872
+
+
+@startuml
+autonumber
+
+    participant "app: Application" as app
+    participant "cm: ContentManager" as cm
+    participant "item: DownloadItem" as item
+    
+    activate app
+    activate cm
+    
+    note over app: User enters media info page
+    
+    note over app: Check if item exists
+    app->cm: findItem(itemId)
+    cm->cm: lookup(itemId)
+    
+    alt item found
+        cm-->app: item
+    else not found
+        cm-->app: null
+        app->cm: createItem(itemId, contentURL)
+        cm->item: new(itemId, contentURL)
+        activate item
+        cm-->app: item
+    
+        app->cm: loadMetadata()
+        note over cm
+            Download and parse manifest, save in db
+        end note
+        cm-->app: onTracksAvailable
+        cm-->app: onDownloadMetadata
+        note over app: * See //track-selection// flow
+    end group
+    
+    note over app: app is ready to start downloading
+    app->item: startDownload()
+    
+    
+    @enduml

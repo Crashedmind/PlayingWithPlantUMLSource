@@ -1,0 +1,34 @@
+' https://real-world-plantuml.com/umls/4619683198140416
+
+@startuml
+package "ArduCopter - Simple Version" {
+  [EnginesControl] -down-> Engines
+  [EnginesControl] - [MainCopterProcess]
+  [MainCopterProcess] - [Rangefinder]
+  [Rangefinder] -down-> BottomSonicSensor
+  [MainCopterProcess] -down- [GPSSignalListener]
+}
+package "CarDuino Nano" {
+  [GPSSignalMaker] -down- [MainCarDuinoProcess]
+  [MainCarDuinoProcess] -down- [CommandListener]
+  [GPSSignalMaker] -up- [GPSSignalSender]
+  [MainCarDuinoProcess] - [5x Rangefinders]
+  [5x Rangefinders] -down-> 5xSonicSensors
+  [TelemetricsSender] - [MainCarDuinoProcess]
+  [TelemetricsSender] -down- MiniUSB
+  [CommandListener] -left- MiniUSB
+}
+package "Intell 2800 - Simple Version" {
+  [ComputerCommunications] -up- USB
+  [ComputerCommunications] - [MainComputerProcess]
+  [KinectProcessing] -down-> KINECT
+  [KinectProcessing] - [MainComputerProcess]
+  [VideoProcessing] -down-> Camera
+  [VideoProcessing] - [MainComputerProcess] 
+  [ComputerCommunications2] -up- [MainComputerProcess]
+  [ComputerCommunications2] -down- WiFi
+  [ComputerCommunications2] -down- Bluetooth
+}
+[GPSSignalListener] -down- [GPSSignalSender]
+USB -up- MiniUSB
+@enduml

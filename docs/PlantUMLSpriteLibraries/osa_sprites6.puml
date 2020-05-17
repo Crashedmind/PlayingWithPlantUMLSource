@@ -1,0 +1,11 @@
+    !include <osa/mobile/pda/pda.puml>
+    !include <osa/padlock/padlock.puml>
+    !include <osa/printer/printer.puml>
+    !include <osa/site_branch/site_branch.puml>
+    !include <osa/site_factory/site_factory.puml>
+
+    Pda: <$pda>
+    Padlock: <$padlock>
+    Printer: <$printer>
+    Site_branch: <$site_branch>
+    Site_factory: <$site_factory>

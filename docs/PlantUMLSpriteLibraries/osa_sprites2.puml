@@ -1,0 +1,12 @@
+    !include <osa/desktop/desktop.puml>
+    !include <osa/desktop/imac/imac.puml>
+    !include <osa/device_music/device_music.puml>
+    !include <osa/device_scanner/device_scanner.puml>
+    !include <osa/device_usb/device_usb.puml>
+
+
+    Desktop: <$desktop>
+    Imac: <$imac>
+    Device_music: <$device_music>
+    Device_scanner: <$device_scanner>
+    Device_usb: <$device_usb>

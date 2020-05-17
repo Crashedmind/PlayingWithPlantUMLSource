@@ -198,8 +198,9 @@ Imagine
    :numbered:   
    :caption: Stdlib
 
-   NetworkUsersMachines/NetworkUsersMachines
+   PlantUMLSpriteLibraries/plantuml_sprites
    PlantUMLSpriteLibraries/PlantUMLSprites
+   NetworkUsersMachines/NetworkUsersMachines
    PassSpriteAsParameter/PassSpriteAsParameter
    
    C4/C4Stdlib

@@ -1,0 +1,16 @@
+@startuml
+
+!include <osa/user/audit/audit.puml>
+!include <osa/user/black/hat/hat.puml>
+!include <osa/user/green/architect/architect.puml>
+
+Auditor : <$audit> 
+Architect: <$architect> 
+BlackHat : <$black_hat>
+
+Auditor -> Architect : blah
+Architect -> BlackHat : blahblah
+
+
+@enduml
+

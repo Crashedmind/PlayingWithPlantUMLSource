@@ -1,0 +1,62 @@
+@startuml
+
+
+!includeurl <aws/common.puml>
+!includeurl <aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml>
+!includeurl <aws/Compute/AWSLambda/AWSLambda.puml>
+!includeurl <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml>
+!includeurl <aws/Database/AmazonDynamoDB/AmazonDynamoDB.puml>
+!includeurl <aws/Database/AmazonDynamoDB/table/table.puml>
+!includeurl <aws/General/AWScloud/AWScloud.puml>
+!includeurl <aws/General/client/client.puml>
+!includeurl <aws/General/user/user.puml>
+!includeurl <aws/SDKs/JavaScript/JavaScript.puml>
+!includeurl <aws/Storage/AmazonS3/AmazonS3.puml>
+!includeurl <aws/Storage/AmazonS3/bucket/bucket.puml>
+
+skinparam componentArrowColor Black
+skinparam componentBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+
+
+USER(user)
+CLIENT(browser)
+JAVASCRIPT(js,SDK)
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3) {
+        BUCKET(site,www.insecurity.co)
+        BUCKET(logs,logs.insecurity.co)
+    }
+
+    AMAZONAPIGATEWAY(api)
+
+    AWSLAMBDA(lambda) {
+        LAMBDAFUNCTION(addComments,addComments)
+    }
+
+    AMAZONDYNAMODB(dynamo) {
+        TABLE(comments,Comments)
+    }
+}
+
+user - browser
+
+browser -d-> site :**1a**) get\nstatic\ncontent
+site ~> logs :1a
+site .u.> browser :**1b**
+browser - js
+js -r-> comments :**2a**) get\ncomments
+comments ..> js :**2b**
+
+js -r-> api :**3**) add\ncomment
+
+api -d-> addComments :**4**
+
+addComments -> comments :**5**
+
+comments ..> js :**6**) new\ncomments
+@enduml

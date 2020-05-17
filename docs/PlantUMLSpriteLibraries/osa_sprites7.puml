@@ -1,0 +1,11 @@
+    !include <osa/user/audit/audit.puml>
+    !include <osa/user/black/hat/hat.puml>
+    !include <osa/user/blue/blue.puml>
+    !include <osa/user/blue/security/specialist/specialist.puml>
+    !include <osa/user/blue/sysadmin/sysadmin.puml>
+
+    Audit: <$audit>
+    Hat: <$hat>
+    Blue: <$blue>
+    Specialist: <$specialist>
+    Sysadmin: <$sysadmin>

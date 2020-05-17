@@ -1,0 +1,36 @@
+@startuml
+
+
+autonumber
+box "UnTrustedDomain" #Red
+	database UnTrustedKeyStore as UKS
+	control UnTrustedKeyManager as UKM
+    boundary KeyLoader as KL
+end box
+
+box "TrustedDomain" #Green
+	database PersistentStorage as KS
+    control KeyManager as KM
+
+end box
+
+
+group In the Beginning...
+    
+    group RootKBPK    
+        note over KM: Unique Root KEK is pre-programmed to SOC - use this as KBPK
+        KS --> KS: Root KBPK exists
+    end
+   
+    group Class KBPK Creation and Storage in UnTrustedDomain 
+        KM --> KM: Create Class N KPBK
+        KS --> KM: RootKBPK 
+        note over KM: Shorthand for create a KeyBlock with ClassKBPK N as key payload, and RootKBPK as KBPK
+        KM --> KM: KeyBlock[ClassKBPK N]RootKBPK
+        KM --> UKM: KeyBlock[ClassKBPK N]RootKBPK
+        UKM --> UKS: KeyBlock[ClassKBPK N]RootKBPK        
+        note over UKS: Process is repeated for ClassKBPK 1,2,3...N 
+    end
+end 
+
+@enduml

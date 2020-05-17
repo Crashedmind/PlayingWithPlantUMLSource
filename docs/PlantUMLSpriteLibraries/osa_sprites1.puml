@@ -1,0 +1,11 @@
+    !include <osa/arrow/green/left/left.puml>
+    !include <osa/arrow/yellow/right/right.puml>
+    !include <osa/awareness/awareness.puml>
+    !include <osa/contract/contract.puml>
+    !include <osa/database/database.puml>
+    
+    Left: <$left>
+    Right: <$right>
+    Awareness: <$awareness>
+    Contract: <$contract>
+    Database: <$database>
