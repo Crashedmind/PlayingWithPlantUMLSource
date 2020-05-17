@@ -201,7 +201,9 @@ Imagine
    NetworkUsersMachines/NetworkUsersMachines
    PlantUMLSpriteLibraries/PlantUMLSprites
    PassSpriteAsParameter/PassSpriteAsParameter
+   
    C4/C4Stdlib
+   
 
    Stdlib/ContributingToStdlib
 
@@ -225,7 +227,7 @@ Imagine
    :numbered:
    :caption: Annex
    
-   C4/C4
+   C4/c4
    DocumentationAsCode/JourneyDocumentationASCode
 
 .. toctree::
