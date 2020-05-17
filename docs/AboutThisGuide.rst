@@ -7,18 +7,11 @@ About this Guide
 .. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
 
 
-.. logo-begin-content
 
-.. figure:: plantumllogo.png
-    :width: 200px
-    :align: center
-    :height: 100px
-    :alt: alternate text
-    :figclass: align-center
+.. include:: index.rst
+   :start-after: logo-begin-content
+   :end-before: logo-end-content
 
-    Where system diagrams meet system reality
-
-.. logo-end-content
 
 
 Goals

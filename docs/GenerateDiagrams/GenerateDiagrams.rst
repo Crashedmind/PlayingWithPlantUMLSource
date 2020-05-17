@@ -145,6 +145,15 @@ Play
     :figclass: align-center
     
     upload puml files; using web interface in this case to commit
+    
+
+
+
+
+.. todo::
+
+    section on add some color to icons by user, machine, network
+    add a boundary
 
 
 Conclusion

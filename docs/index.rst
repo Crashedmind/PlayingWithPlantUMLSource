@@ -7,10 +7,33 @@ Welcome to Playing with PlantUML!
 .. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
 
 
+.. logo-begin-content
 
-.. include:: introduction.rst
-   :start-after: logo-begin-content
-   :end-before: logo-end-content
+.. figure:: plantumllogo.png
+    :width: 200px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+
+    Where system diagrams meet system reality
+
+.. logo-end-content
+
+
+
+.. caveat-begin-content
+
+.. todo::
+
+    Add instructions for user to provide feedback
+
+.. warning::
+
+    This is an initial draft that likely contains typos, and will likely change.
+    If you do find an issue, or would like to suggest a change, then submit an issue on Todo
+
+.. caveat-end-content
 
 
 .. _AgileModeling: https://masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/
@@ -156,7 +179,7 @@ Imagine
 
     include extract from about plantuml chapter
 
-https://modeling-languages.com/interview-plantuml/
+
 
 .. comment
     Sphinx is expecting 3 spaces under toctree i.e. it does not work with 4
@@ -184,7 +207,7 @@ https://modeling-languages.com/interview-plantuml/
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Running PlantUML
+   :caption: New ways to Run PlantUML
    
    GenerateDiagrams/GenerateDiagrams
    GenerateDiagrams/GenerateDiagramsLambda
@@ -198,9 +221,6 @@ https://modeling-languages.com/interview-plantuml/
    :maxdepth: 2
    :numbered:
    :caption: ToDo
-
-   
-   
       
    todo   
    

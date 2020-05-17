@@ -3,15 +3,6 @@ Create a Diagram of a Typical Network
 ******************************************************
 
 
-.. todo::
-
-    Add instructions for user to provide feedback
-
-.. warning::
-
-    This is an initial draft that likely contains typos, and will likely change.
-    If you do find an issue, or would like to suggest a change, then submit an issue on Todo
-
 .. _vision: https://www.scaledagileframework.com/vision/
 .. _PlantUML: https://www.plantuml.com/
 .. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
