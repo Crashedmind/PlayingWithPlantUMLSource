@@ -150,12 +150,11 @@ Imagine
 .. showcase-end-content
 
 
-About PlantUML
-===============================================================================
+
 
 .. todo::
 
-    ask @Arnaud to give history and context and his view of plantuml
+    include extract from about plantuml chapter
 
 https://modeling-languages.com/interview-plantuml/
 
@@ -167,6 +166,7 @@ https://modeling-languages.com/interview-plantuml/
    :numbered:
    :caption: Introduction
 
+   AboutPlantUML
    AboutThisGuide
 
       
