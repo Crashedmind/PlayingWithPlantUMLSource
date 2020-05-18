@@ -210,22 +210,17 @@ Imagine
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Stdlib
+   :caption: Standard Library 
 
 
    PlantUMLSpriteLibraries/PlantUMLSprites
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    NetworkUsersMachines/NetworkUsersMachines
+   C4/C4Stdlib
    Stdlib/StandardisingStdLib
    Stdlib/ContributingToStdlib   
    
 
-.. toctree::
-   :maxdepth: 2
-   :numbered:   
-   :caption: C4   
-   
-   C4/C4Stdlib
    
 
 
