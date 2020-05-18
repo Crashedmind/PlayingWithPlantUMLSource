@@ -199,16 +199,25 @@ Imagine
    AboutPlantUML
    AboutThisGuide
 
-      
+
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: PlantUML Features
+
+   PlantUMLSpriteLibraries/plantuml_sprites
+   PassSpriteAsParameter/PassSpriteAsParameter
+   NamedArguments/NamedArguments
+
 .. toctree::
    :maxdepth: 2
    :numbered:   
    :caption: Stdlib
 
-   PlantUMLSpriteLibraries/plantuml_sprites
+
    PlantUMLSpriteLibraries/PlantUMLSprites
    NetworkUsersMachines/NetworkUsersMachines
-   PassSpriteAsParameter/PassSpriteAsParameter
    Stdlib/StandardisingSrdLib
    Stdlib/ContributingToStdlib   
    
