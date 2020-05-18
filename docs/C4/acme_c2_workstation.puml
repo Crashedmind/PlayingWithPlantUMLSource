@@ -1,0 +1,31 @@
+@startuml
+!include  <C4/C4_Context.puml>
+!include  <C4/C4_Container.puml>
+!include <office/Users/user.puml>
+
+LAYOUT_WITH_LEGEND()
+skinparam handwritten false
+
+
+title Container Diagram for ACME Widget Workstation 
+
+
+
+System_Boundary(WorkStation, "Workstation") {
+    Person(VfiOperator, Operator , "<$user> \n On-site Operator who produces Widget" )
+
+    System(WorkStationPC, "WorkStation PC", "Drives the Production process. \nProvides feedback to operator. \nConnects to central Production system")    
+
+    System(Hub, "Hub", "Connects Multiple Widgets")    
+
+    System(Unit1, "Unit1", "Widget 1")    
+    System(Unit2, "Unit2", "Widget 2")    
+    System(UnitN, "UnitN", "Widget N")    
+}
+
+Rel_R(VfiOperator, WorkStationPC, "Checks Production status")
+Rel_D(WorkStationPC, Hub, "Drive Production and Info Retrieval")
+Rel(Hub, Unit1, "Connect")
+Rel(Hub, Unit2, "Connect")
+Rel(Hub, UnitN, "Connect")
+@enduml
