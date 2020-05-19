@@ -44,7 +44,8 @@ extensions = [
               "sphinx.ext.autosectionlabel",
               "sphinxcontrib.yt",
               "sphinx.ext.todo",
-              "sphinxcontrib.confluencebuilder"
+              "sphinxcontrib.confluencebuilder",
+              'sphinxcontrib.twitter'
              
 ]
 

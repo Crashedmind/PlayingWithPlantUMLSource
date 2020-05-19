@@ -19,18 +19,47 @@ Goals
 
 #. Create a user-focused guide for PlantUML that enables you, the user, to deliver maximum value with PlantUML.
 #. Create a guide that was better than anything that existed and that I, @crashedmind, would be happy with.
-#. Seed the community to 
+#. Grow PlantUML; this guide and other information, the tool, and the community.
 
 Guide Principles
 ===============================================================================
 
 The Principles on which this guide are based:
 
+#. Deliver Value to the user
 #. Learn by Playing: All examples include a link to allow you to edit and play with them easily - no setup required.
-#. Open source - anyone can contribute to, or fork, this guide.
-#. It must be fun to write it - and to read it.
 #. To teach is to learn twice. If I knew all this info already, I would have no interest in writing this guide. There's no better way to learn than by writing a guide for others - and having the master on hand to provide insights as you go - and the community to share their knowledge. I expect to learn from feedback on this guide.
+#. Open source - anyone can contribute to this guide. Moreover, the first release is intended as a seed to be grown by the PlantUML community.
+#. It must be fun to write it - and to read it.
 #. Documentation-Of-Code Documentation-As-Code: documentation of the examples, and the example source live together in the same directory in Git. 
+
+
+Deliver Value To The User
+-------------------------------------------------------------------------------
+This guide is focused on enabling you to do what you need to do - empowered by PlantUML.
+So it is outcome focused.
+
+In my professional role building products in the software industry, I tell my team members: 
+
+*The customer cares about what they are trying to do - not your product.*
+
+This tweet illustrates this:
+
+.. tweet:: https://twitter.com/UserOnboard/status/408372844876165120
+
+
+        
+Learn by Playing
+-------------------------------------------------------------------------------
+
+Each chapter has an outcome.
+
+Each step in each chapter has 
+
+    #. An outcome - the step heading
+    #. Source code - for the diagram
+    #. Play - where you can test the diagram and play with it.
+    #. Explore - where you can confirm your understanding by trying things as you play.
 
 
 This Guide

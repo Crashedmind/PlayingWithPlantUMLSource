@@ -30,6 +30,8 @@ RUN mkdir -p /usr/share/man/man1 \
   # for mixing RST and MD files https://www.sphinx-doc.org/en/1.6/markdown.html
   RUN pip3 install recommonmark
 
+  RUN pip3 install sphinxcontrib.twitter
+
   # since plantuml url is not the final file location, we need to explicitly save the file as "plantuml.jar" 
   # it would save as file "download" if we didn't         
   
