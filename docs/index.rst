@@ -183,7 +183,7 @@ Imagine
    :caption: PlantUML Features
 
    PlantUMLSpriteLibraries/plantuml_sprites
-   NamedArguments/scale
+   scale/scale
    PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax

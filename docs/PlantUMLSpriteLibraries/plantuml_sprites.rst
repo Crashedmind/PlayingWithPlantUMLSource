@@ -96,6 +96,8 @@ This uses the image tag which is part of PlantUML creole_ Legacy HTML support pe
 
 .. EndPlayingExample
 
+.. todo ::
+    can scale an image also - need to try    
 
 Connect Images In A Diagram
 -------------------------------------------------------------------------------

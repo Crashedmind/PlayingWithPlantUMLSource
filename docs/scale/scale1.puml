@@ -1,0 +1,21 @@
+@startuml
+sprite $foo1 {
+FFFFFFFFFFFFFFF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+FFFFFFFFFFFFFFF
+}
+
+Alice -> Bob : Scale x1 <$foo1>
+
+Alice -> Bob : Scale x3 using scale <$foo1{scale=3}>
+
+Alice -> Bob : Scale x6 using * <$foo1*6>
+
+@enduml
