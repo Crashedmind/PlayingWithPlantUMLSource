@@ -8,7 +8,7 @@ About this Guide
 
 .. _Twice: https://en.wikipedia.org/wiki/Joseph_Joubert
 
-.. include:: index.rst
+.. include:: ../index.rst
    :start-after: logo-begin-content
    :end-before: logo-end-content
 

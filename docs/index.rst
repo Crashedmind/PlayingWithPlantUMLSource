@@ -191,10 +191,13 @@ Imagine
 
    PlantUMLSpriteLibraries/plantuml_sprites
    scale/scale
-   PassSpriteAsParameter/PassSpriteAsParameter
+   
+ 
+
+   PassSpriteAsParameter/NewSpriteLibFormat
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax
-   PassSpriteAsParameter/NewSpriteLibFormat
+   
 
 
 
@@ -208,6 +211,10 @@ Imagine
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    NetworkUsersMachines/NetworkUsersMachines
 
+   Stdlib/StdLibOverview
+   Stdlib/StdlibUnderstanding
+   Stdlib/PassSpriteAsParameter
+   Stdlib/stdlibRequirements
    Stdlib/StandardisingStdLib
    Stdlib/ContributingToStdlib   
    

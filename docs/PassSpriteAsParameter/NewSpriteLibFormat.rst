@@ -1,11 +1,13 @@
+*******************************************************************************
 A new sprite format
-===================
+*******************************************************************************
+
 
 Features that may be useful
----------------------------
+===============================================================================
 
-listsprites
-~~~~~~~~~~~
+Listsprites
+-------------------------------------------------------------------------------
 
 listsprites per icon
 ^^^^^^^^^^^^^^^^^^^^
@@ -48,6 +50,8 @@ http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuLBCp4lEAKr9LR19B2\_EoKpITmmFTi
 .. figure:: ./listsprites-colour.png
    :alt: 
 
+
+
 skinparam
 =========
 
@@ -62,9 +66,10 @@ skinparam
 !function and !procedure vs !define and !definelong
 ===================================================
 
-Per https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng: *You should
-not use !define and !definelong anymore. Use !function, !procedure or
-variable definition instead.*
+Per https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng: 
+
+*You should not use !define and !definelong anymore. Use !function, !procedure 
+or variable definition instead.*
 
 *!define should be replaced by return !function*
 
@@ -135,7 +140,7 @@ http://www.plantuml.com/plantuml/uml/1C7Bag8w003GlL\_HYxkrRi83ktU3ID8g1beWG4zDfQ
     '$bBatch()
     @enduml
 
-Above - deployment diagram does now work
+Above - deployment diagram  now works
 
 .. figure:: ./procedure2.png
    :alt: 

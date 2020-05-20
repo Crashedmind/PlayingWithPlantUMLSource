@@ -13,14 +13,8 @@ Scaling Sprites
 .. _together: https://forum.plantuml.net/4387/please-provide-together-keyword-group-diagram-nodes-together
 
 
-
-.. todo ::
-    add ref to scaling page
-
 Scaling Sprite Options
 ===============================================================================
-
-
 
 .. uml:: ./scale1.puml
     :align: center

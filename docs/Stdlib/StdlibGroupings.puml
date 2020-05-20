@@ -1,0 +1,22 @@
+
+@startmindmap
+* Standard Library groupings
+** C4 (does not contain sprites)
+** Sprites
+*** Sprites only
+**** logos
+**** cloudinsight
+**** kubernetes
+*** Sprites and Macros
+**** Type 1
+***** aws 
+***** osa
+***** elastic
+**** Type 2
+***** azure
+***** awslib (newest)
+***** office
+***** cloudogu
+***** tupadr3
+***** material
+@endmindmap
