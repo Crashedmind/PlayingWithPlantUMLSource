@@ -204,20 +204,22 @@ Imagine
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Standard Library Icons
-
-
-   PlantUMLSpriteLibraries/PlantUMLSprites
-   PlantUMLSpriteLibraries/CreateSpriteLibrary
-   NetworkUsersMachines/NetworkUsersMachines
+   :caption: Understanding Standard Library 
 
    Stdlib/StdLibOverview
    Stdlib/StdlibUnderstanding
    Stdlib/PassSpriteAsParameter
    Stdlib/stdlibRequirements
    Stdlib/StandardisingStdLib
+   PlantUMLSpriteLibraries/CreateSpriteLibrary
    Stdlib/ContributingToStdlib   
-   
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Using Standard Library 
+
+   NetworkUsersMachines/NetworkUsersMachines
 
 .. toctree::
    :maxdepth: 2

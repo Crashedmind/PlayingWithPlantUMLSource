@@ -15,7 +15,7 @@ PlantUML Stdlib Overview
 
 .. tip ::
 
-    Use GitHub File Finder to search for an icon quickly directly from GitHub:
+    Use GitHub File Finder to search for an icon quickly - directly from GitHub:
 
     #. Browse to the PlantUML Standard Library repo https://github.com/plantuml/plantuml-stdlib
     #. Press the ```t``` key to enter GitHub File Finder mode
@@ -30,11 +30,42 @@ PlantUML Standard Library Overview
 ===============================================================================
 This overview is at May 2020.
 
+
+
+`PlantUML Standard Library <https://plantuml.com/stdlib>`__ includes
+several icon libraries from different sources (including myself) and
+they are varied in functionality and how to use them.
+When I contributed, I followed the existing stdlib
+
+The most recent addition is
+https://github.com/awslabs/aws-icons-for-plantuml.
+
+https://github.com/awslabs/aws-icons-for-plantuml (Amazon) builds on the
+work of https://github.com/RicardoNiepel (MicroSoft):
+
+1. `https://github.com/RicardoNiepel/Azure-PlantUML <https://github.com/RicardoNiepel/Azure-PlantUML>`__
+2. https://github.com/RicardoNiepel/C4-PlantUML which builds on
+   https://c4model.com/
+
+   These in turn build on
+
+      1. https://github.com/milo-minderbinder/AWS-PlantUML
+      2. https://github.com/Roemer/plantuml-office
+
+
+.. note ::
+
+    There are now 2 AWS icon sets in PlantUML Stdlib:
+    
+    * The original one from 2018 with the older icon style: https://github.com/plantuml/plantuml-stdlib/blob/master/aws/INFO
+    * The newer one from 2020 AWSlabs https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/INFO that has the latest icons from AWS.
+
+
 Broadly, the main groupings are per diagram
 
-.. uml:: stdlibgroupings.puml
+.. uml:: StdlibGroupings.puml
     :align: center
-    :caption: stdlib Groupings of libraries
+    :caption: PlantUML Stdlib Groupings Of Libraries Based On Similarity
 
 
 
@@ -125,6 +156,20 @@ https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/ARVR/ARVR.puml
     !define ARVRParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #CC2264, ARVR, ARVR)
 
 
+The BatchParticipant part supports adding icons to sequence diagrams
+i.e.
+
+::
+
+    !define BatchParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D86613, Batch, Batch)
+
+.. todo ::
+    replace sequence.png with puml file
+
+.. figure:: sequence.png
+   :alt: 
+
+
 office
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -208,4 +253,13 @@ Icons are grouped into a file based on resolutions and labels
 
 * Different resolutions 64x63/16z, 128x125/16z, 256x249/16z]
 * labeled or unlabeled
+
+
+
+
+
+
+|image0| Example image from icons from AWSlabs icon files
+[https://github.com/awslabs/aws-icons-for-plantuml]
+
 
