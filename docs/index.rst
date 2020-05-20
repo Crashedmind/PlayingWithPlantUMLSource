@@ -193,7 +193,7 @@ Imagine
    scale/scale
    
  
-   Stdlib/PassSpriteAsParameter
+   PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax
    

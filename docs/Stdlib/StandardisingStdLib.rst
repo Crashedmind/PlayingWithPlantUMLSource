@@ -30,10 +30,8 @@ Default Values
 DefaultArgumentValue_
 
 "In both procedure and return functions, you can define default values for arguments"
-    The `default
-    argument <https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng>`__
+    The `default argument <https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng>`__
     value can help to simplify definitions
     
-    There are also now `dynamic
-    invocation <https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov>`__
+    There are also now `dynamic invocation <https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov>`__
     which may be useful
