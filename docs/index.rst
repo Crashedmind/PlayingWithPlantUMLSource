@@ -193,8 +193,7 @@ Imagine
    scale/scale
    
  
-
-   PassSpriteAsParameter/NewSpriteLibFormat
+   Stdlib/PassSpriteAsParameter
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax
    
@@ -207,9 +206,9 @@ Imagine
    :caption: Understanding Standard Library 
 
    Stdlib/StdLibOverview
-   Stdlib/StdlibUnderstanding
-   Stdlib/PassSpriteAsParameter
+   StdlibUnderTheHood/StdlibUnderstanding
    Stdlib/stdlibRequirements
+   PassSpriteAsParameter/NewSpriteLibFormat
    Stdlib/StandardisingStdLib
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    Stdlib/ContributingToStdlib   

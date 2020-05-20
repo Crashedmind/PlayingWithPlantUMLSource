@@ -1,0 +1,10 @@
+@startuml 
+
+!include <awslib/AWSCommon>
+!include <awslib/Compute/Batch.puml>
+
+rectangle "<$Batch>" 
+
+'this overides/specifies a color as red
+rectangle "<color:red><$Batch></color>"
+@enduml

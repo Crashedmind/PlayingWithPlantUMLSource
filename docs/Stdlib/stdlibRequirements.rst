@@ -27,11 +27,11 @@ Observations on Standard Library
 
         #. some break up the icons into categories sub-directories, some don't
         #. some have an ```all.puml``` file that includes all sprite content per category, some don'target
-#. There's no way to scale the icons from the macros (the !define statements). Plantuml does support scaling per 
-    https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images. Support for scaling stereotypes is available since `March
-   2019 <https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images?show=9086#c9086>`__.
-#. At least 3 parameters are required and are rendered in the diagams
-   "!define Batch(e\_alias, e\_label, e\_techn)".
+
+#. There's no way to scale the icons from the macros (the !define statements). Plantuml does support scaling per https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images. Support for scaling stereotypes is available since `March 2019 <https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images?show=9086#c9086>`__.
+
+#. At least 3 parameters are required and are rendered in the diagams  "!define Batch(e\_alias, e\_label, e\_techn)".
+    
     #. So if we wanted a colored or scaled icon only (with no label or technology), the only option is to use the raw sprite (more on that later).
 
 Overall, the PlantUML Stdlib lacks consistency and therefore user friendliness.

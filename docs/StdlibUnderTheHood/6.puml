@@ -1,0 +1,32 @@
+@startuml 
+
+!include <awslib/AWSCommon>
+!include <awslib/Compute/Batch.puml>
+!include <awslib/Compute/Compute.puml>
+
+
+
+'Use the Compute icon here for contrast
+'this uses a macro - and hardcodes the color - color copyNpasted from Batch.puml file
+'===================================================================================
+!define Compute(e_alias) rectangle "<color:#D86613><$Compute></color>"  
+Compute(Compute) 
+Compute(Compute) as something
+
+
+' This uses the AWSEntity macros defined in Batch.puml
+' the end result is same as above - but we use the e_alias so that multiple calls show
+'===================================================================================
+!definelong AWSEntity(e_sprite, e_color)
+rectangle "<color:e_color><$e_sprite></color>" 
+!enddefinelong
+
+' Batch.puml
+!define Batch(e_alias) AWSEntity(Batch, #D86613) as e_alias
+
+Batch(whatever)
+Batch(whateverElse) 
+Batch(3.13xyz) 
+
+
+@enduml

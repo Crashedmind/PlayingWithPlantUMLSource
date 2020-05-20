@@ -1,0 +1,6 @@
+@startuml 
+
+!include <awslib/AWSCommon>
+!include <awslib/Compute/Batch.puml>
+
+@enduml

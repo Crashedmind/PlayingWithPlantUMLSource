@@ -75,7 +75,7 @@ Broadly, the main groupings are per diagram
 Type 1
 ---------------------------------------------------------------------------------------------------
 AWS is one of the original stdlib entries - it's from 2017.
-Some libraries followed the same layout, or used the same tools to create the sprites e.g. 
+Some libraries, listed below, followed the same layout, or used the same tools to create the sprites.
 
 
 https://github.com/plantuml/plantuml-stdlib/blob/master/aws/AI/AmazonLex/ contains 4 files:

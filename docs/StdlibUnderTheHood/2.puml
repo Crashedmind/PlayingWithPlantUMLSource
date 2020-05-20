@@ -1,0 +1,11 @@
+@startuml 
+
+!include <awslib/AWSCommon>
+!include <awslib/Compute/Batch.puml>
+
+rectangle "<$Batch>" 
+
+'NOTE that if we add a more than one call - nothing happens! Need to change the second one to "as whateverElse"
+rectangle "<$Batch>" as whatever
+rectangle "<$Batch>" as whatever
+@enduml
