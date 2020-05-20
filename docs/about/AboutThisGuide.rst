@@ -34,6 +34,9 @@ The Principles on which this guide are based:
 #. Documentation-Of-Code Documentation-As-Code: documentation of the examples, and the example source live together in the same directory in Git. 
 
 
+
+.. _delivervalue-label:
+
 Deliver Value To The User
 -------------------------------------------------------------------------------
 This guide is focused on enabling you to do what you need to do - empowered by PlantUML.

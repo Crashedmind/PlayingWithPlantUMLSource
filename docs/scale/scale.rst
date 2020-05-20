@@ -14,8 +14,12 @@ Scaling Sprites
 
 
 
+.. todo ::
+    add ref to scaling page
+
 Scaling Sprite Options
 ===============================================================================
+
 
 
 .. uml:: ./scale1.puml
@@ -26,6 +30,8 @@ Scaling Sprite Options
     :linenos:
     :emphasize-lines: 17, 19
 
+The option on line 17 is the one given on https://plantuml.com/sprite.
+
 
 Revisiting :ref:`scalebigsmall-label`
 ===============================================================================
@@ -34,11 +40,13 @@ In :ref:`scalebigsmall-label` we created a large sprite 100x100 sprite, and a sm
 16 sprite.
 
 Here we create 1 48x48 sprite and scale it by x2 for large, and by 0.33 for small.
+We use the `*X` option, instead of `{scale*X}` option.
 
 .. uml:: ./bigsmallscale.puml
     :align: center
-    :caption: scaling one sprite bigger and smaller
+    :caption: Scaling one sprite bigger and smaller
 
 .. literalinclude:: ./bigsmallscale.puml
     :linenos:
+    :emphasize-lines: 56,57
 

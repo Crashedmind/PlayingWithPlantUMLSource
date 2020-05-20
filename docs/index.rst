@@ -52,6 +52,13 @@ Imagine
     Well that's what PlantUML gives you, and more...
 
 
+.. todo::
+
+   recreate in plantuml
+   https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/real-time-recommendation
+
+   also pick an aws arch blog example
+
 .. raw:: html
 
       <!DOCTYPE html>
@@ -172,8 +179,8 @@ Imagine
    :numbered:
    :caption: Introduction
 
-   AboutPlantUML
-   AboutThisGuide
+   about/AboutPlantUML
+   about/AboutThisGuide
 
 
 
@@ -187,6 +194,7 @@ Imagine
    PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax
+   PassSpriteAsParameter/NewSpriteLibFormat
 
 
 
@@ -199,12 +207,18 @@ Imagine
    PlantUMLSpriteLibraries/PlantUMLSprites
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    NetworkUsersMachines/NetworkUsersMachines
-   C4/C4Stdlib
+
    Stdlib/StandardisingStdLib
    Stdlib/ContributingToStdlib   
    
 
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Stdlib C4
    
+   C4/c4
+   C4/C4Stdlib   
 
 
 
@@ -228,7 +242,6 @@ Imagine
    :numbered:
    :caption: Annex
    
-   C4/c4
    DocumentationAsCode/JourneyDocumentationASCode
 
 .. toctree::
@@ -254,4 +267,8 @@ Imagine
 
 
 
+
 .. caveat-end-content
+
+
+

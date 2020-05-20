@@ -317,6 +317,13 @@ C4person4.sprite file:
     :linenos:
    
 
+.. note ::
+    You may have noticed there are more than 4 different values in C4person4.sprite
+    This is to make sprite definition as compact as possible. For sprite with 4 colors, each pixel can have 4 values.
+    If you group pixels by 3, it means that you have 4*4*4 = 64 possible values by pixel's group.
+    If you use characters 0-9, A-Z, a-z and _ and -, you have exactly 64 values. 
+    So each character encodes actually 3 pixels at once.
+
 .. _scalebigsmall-label:
 
 Create Diagram With Our Sprites
