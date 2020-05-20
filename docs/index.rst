@@ -201,7 +201,7 @@ Imagine
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Standard Library 
+   :caption: Standard Library Icons
 
 
    PlantUMLSpriteLibraries/PlantUMLSprites
@@ -215,10 +215,11 @@ Imagine
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Stdlib C4
+   :caption: Standard Library C4
    
    C4/c4
    C4/C4Stdlib   
+   C4/c4acme
 
 
 
