@@ -1,0 +1,110 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/Storage/all.puml>
+!include <awslib/ManagementAndGovernance/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/MachineLearning/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/Database/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+
+
+'Compute/General
+'Storage/SimpleStorageServiceS3.png
+'ApplicationIntegration/SQS.png
+'Compute/Lambda.png
+'Compute/EC2
+'ManagementAndGovernance/CloudWatch.png
+'CustomerEngagement/SESEmail.png
+'MachineLearning/SageMaker.png
+''Mobile/APIGateway.png
+'NetworkingAndContentDelivery/APIGateway2.png
+'Database/Aurora.png
+'ApplicationIntegration/SQSQueue.png
+
+
+ 'skinparam linetype polyline
+' skinparam linetype ortho
+
+'top left section 
+'-------------------------------------------------------------
+package EC2_Instance {
+General(IngestionApp, "Ingestion App", " ")
+General(ChunkingApp, "Chunking Orchestration App", " ")
+}
+
+SimpleStorageServiceS3(S3Staging, "Amazon S3 Staging Bucket", " ")
+SQS(SQSIngest, "Amazon SQS Ingest Queue", " ")
+
+Lambda(LambdaTrigger, "AWS Lambda Trigger Function", " ")
+
+LambdaTrigger -up-> IngestionApp
+IngestionApp -up-> SQSIngest
+SQSIngest -down-> ChunkingApp
+S3Staging -down-> EC2_Instance
+
+'top right section 
+'-------------------------------------------------------------
+SQS(SQSLargeFileQueue, "Amazon SQS Large File Queue", " ")
+SQS(SQSSmallFileQueue, "Amazon SQS Small File Queue", " ")
+SQS(SQSSingleFileQueue, "Amazon SQS Single File Queue", " ")
+
+EC2(LargeFileChunkingAppEC2, "Large File Chunking App on EC2", " ")
+Lambda(LambdaSmallFileChunking, "Small File Chunking Lambda", " ")
+Lambda(ImageConversionLambdaFunction, "Image Conversion Lambda Function", " ")
+
+'todo dashed line boundary
+package DLQ {
+SQSQueue(DLQ1, "DLQ", " ")
+SQSQueue(DLQ2, "DLQ", " ")
+SQSQueue(DLQ3, "DLQ", " ")
+}
+
+ChunkingApp -right-> SQSLargeFileQueue
+ChunkingApp -right-> SQSSmallFileQueue
+ChunkingApp -right-> SQSSingleFileQueue
+
+SQSLargeFileQueue -right-> LargeFileChunkingAppEC2
+LargeFileChunkingAppEC2 -down-> SQSSmallFileQueue
+SQSSmallFileQueue -right-> LambdaSmallFileChunking
+LambdaSmallFileChunking -down-> SQSSingleFileQueue
+SQSSingleFileQueue -right-> ImageConversionLambdaFunction
+
+'todo dashed line
+SQSLargeFileQueue -down-> DLQ1
+SQSSmallFileQueue -down-> DLQ2
+SQSSingleFileQueue -down-> DLQ3
+
+
+'bottom right section 
+'-------------------------------------------------------------
+
+SimpleStorageServiceS3(S3Images, "Amazon S3 Images Bucket", " ")
+EC2(EC2DLQFailsafeApp, "DLQ Failsafe App on EC2", " ")
+SQS(SQSConvertedImageQueue, "Amazon SQS Converted Image Queue", " ")
+Lambda(LambdaInferenceInvocation, "Inference Invocation Lambda Function", " ")
+Aurora(Aurora, "Amazon Aurora", " ")
+'APIGateway(APIGateway, "Amazon API Gateway")
+'SageMaker(SageMaker, "Amazon SageMaker Endpoint")
+
+DLQ1 -down-> EC2DLQFailsafeApp
+DLQ2 -down-> EC2DLQFailsafeApp
+DLQ3 -down-> EC2DLQFailsafeApp
+
+EC2DLQFailsafeApp -right-> S3Images
+
+ImageConversionLambdaFunction -down-> S3Images
+S3Images -down-> SQSConvertedImageQueue
+SQSConvertedImageQueue -left-> LambdaInferenceInvocation
+LambdaInferenceInvocation -down-> Aurora
+'LambdaInferenceInvocation -left-> APIGateway
+'APIGateway -left-> SageMaker
+
+
+@enduml

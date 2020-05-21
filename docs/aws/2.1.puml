@@ -1,0 +1,55 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/Storage/all.puml>
+!include <awslib/ManagementAndGovernance/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/MachineLearning/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/Database/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+
+
+'Compute/General
+'Storage/SimpleStorageServiceS3.png
+'ApplicationIntegration/SQS.png
+'Compute/Lambda.png
+'Compute/EC2
+'ManagementAndGovernance/CloudWatch.png
+'CustomerEngagement/SESEmail.png
+'MachineLearning/SageMaker.png
+''Mobile/APIGateway.png
+'NetworkingAndContentDelivery/APIGateway2.png
+'Database/Aurora.png
+'ApplicationIntegration/SQSQueue.png
+
+
+ skinparam linetype polyline
+' skinparam linetype ortho
+
+package EC2_Instance {
+General(IngestionApp, "Ingestion App", " ")
+General(ChunkingApp, "Chunking Orchestration App", " ")
+}
+
+SimpleStorageServiceS3(S3Staging, "Amazon S3 Staging Bucket", " ")
+SQS(SQSIngest, "Amazon SQS Ingest Queue", " ")
+
+Lambda(LambdaTrigger, "AWS Lambda Trigger Function", " ")
+
+LambdaTrigger -up-> IngestionApp
+IngestionApp -up-> SQSIngest
+SQSIngest -down-> ChunkingApp
+S3Staging -down-> EC2_Instance
+
+'Users -down-> Mobile: 1. Visits
+'Mobile -right-> AdExchange: 2. Start auction
+
+
+
+@enduml

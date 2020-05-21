@@ -76,8 +76,9 @@ Traditional Server
 
 We need "Traditional Server" for "Ad Exchange"
 
+.. note ::
 
-```autonumber``` does not work in these diagrams.
+    ```autonumber``` does not work in these diagrams.
 
 
 
@@ -87,6 +88,13 @@ We need "Traditional Server" for "Ad Exchange"
 .. literalinclude:: ./1.puml
     :linenos: 
 
+Find Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. uml:: 1.1.puml
+    :align: center
+    
+.. literalinclude:: ./1.1.puml
+    :linenos: 
 
 Add Text To Icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,17 +148,12 @@ Add A Box: package
 
 
 
-.. todo ::
-    recover info from png with plantuml
-    High-level-digram-1-Smadex-1024x584.png
-    https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png
 
 
 
 
 
 
-https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/all.puml
 
 
 2
@@ -161,6 +164,49 @@ https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/all.p
     
 Building a Scalable Document Pre-Processing Pipeline https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/
 
+
+.. uml:: 2.1.puml
+    :align: center
+    
+.. literalinclude:: 2.1.puml
+    :linenos: 
+
+.. uml:: 2.2.puml
+    :align: center
+    
+.. literalinclude:: 2.2.puml
+    :linenos: 
+
+.. uml:: 2.3.puml
+    :align: center
+    
+.. literalinclude:: 2.3.puml
+    :linenos: 
+
+.. uml:: 2.4.puml
+    :align: center
+    
+.. literalinclude:: 2.4.puml
+    :linenos: 
+
+
+.. uml:: 2.5.puml
+    :align: center
+    
+.. literalinclude:: 2.5.puml
+    :linenos: 
+
+
+.. uml:: 2.6.puml
+    :align: center
+    
+.. literalinclude:: 2.6.puml
+    :linenos: 
+
+
+http://www.plantuml.com/plantuml/uml/hLRHZgis47ttLxZx0fMQUzNajRgwQJQxYhIxxOfA-rWvC25eZOsCsIYj-kyTR6oJnD27RgG8VCwP6NDcZFZUQgPqLtFoGoLotXL0Vs6dbbVxh-ktR2FhMeflKIwhwePNXmgABmt6HqGOtNGQlZBEfoIrt5TyLb620CNudEHHoQxPvLAqSwfCIyNAsLhFJA2Y1g7NedYK7w044_bioAPhjQn1RKKvXCuNo8-LW2TWIbIYd9E-W3v9zOugtCj62esfxu5NkAdpNDmzqspFsjbDhnliNCvq9SKE4vVAt8uYy9UuxZtQ1f346MWQ3yCg0_LHvP2jlZIY9Cb4vkmrixnB-iJgVS4kiUrcIPAf5coux8etflEZ3OhudcspRSqgRWNNLcSeUsRle2oTFDl9M_--UsGQJkniyLdRWtXfrTxiTQVGZl_ouBM33eo849gqMALXYjMKuqRrkG7QI7xk5oIX4LOgVPJO6IqRok6WQGjvdvgIPF5_VgHX-JlQGx43V-v4gtl7wTzaw7ow4oMqVI5yif_edLzINDyXGEz-zDhDiHF6FIDrA_gRoeyOfDXrt3-4nESfpLQPPYK6et9TixymBblH0QE_TlaxQ9S5lKtnRtSMz0XHYr5ZlPCJEtwflVoXgh84rOUzPTHYT03fGoUCnrUXZbvqpU8R7Hj4nek1zriZ_euk2daIo8qC8_wHFJlkoD1vh7pyjDOxvvwOAk6Xuc1ykdJGSBGdBrnqeLdDE9y8DTnCA3ugdofhoKWmGLDIl-6HVuYZPBHTnr4aAQP5WKjoCG7-4Lm0YWnsbSQghrBiQbR2HeeFK2rsnA9kR51gU1e4GvRRoSBk5f8Mh3r2OGuztSjE54oT_G6zVth5S-dU92akVyPel0HZ0xMSfbQUSeTmP2DTc173wRiPZ4cPTt1ETjDmGcug1Fb4Xya4RezCT3SUYHM9zfzCuBP8_5ay52apEoEHpaTySPNxdlidYjBBi9Kelo9OSI-rblNdlancNkN6WFRYJMwXonUvEThunrq-i8gtx03ONJkir24tfzc_Jwp36WgJE_9EyG9RdHf9z9Mm4mTG87BOYG-PCtUM7KezF7cUxIT1QYzX6tRjH4duf4Yj800X1Z4wW7sC_vGPGlmwH7Y8RaNHo4fe32JzxFX9kB6vfvVpz6g69ZTGc7yt08JCdWIVtUlTZMVYNIPnc2uu7FhwapqbauolQ1j6aacbhn9QD-whftrFmldxtCyu4ZwIqt0RXi9WfnxpuvUzP2d-WmON1X--fLDtWmfpfIzILuVXynQLevgXtJW690c4jnAJcv8USDa9-GwYw6fE_WK0
+
+
 3
 ===============================================================================
 
@@ -168,3 +214,13 @@ Building a Scalable Document Pre-Processing Pipeline https://aws.amazon.com/blog
 .. figure :: ./BBVA-uses-AWS-Transit-Gateway-to-build-a-hub-and-spoke-network-topology-2.png
 
 BBVA: Helping Global Remote Working with Amazon AppStream 2.0 https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/
+
+
+
+
+
+
+.. todo ::
+    recover info from png with plantuml
+    High-level-digram-1-Smadex-1024x584.png
+    https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png
