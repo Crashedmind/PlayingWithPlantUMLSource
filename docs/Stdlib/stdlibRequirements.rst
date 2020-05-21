@@ -1,6 +1,9 @@
 *******************************************************************************
-Standard Library
+Standard Library - What We Have And What We Want
 *******************************************************************************
+
+.. todo ::
+    put this stuff in tables to make it clearer
 
 Observations on Standard Library
 ===============================================================================
@@ -37,6 +40,8 @@ Observations on Standard Library
         ```!define WHATEVER(_alias, _label, _shape, _color) ENTITY(_shape,_color,whatever,_label, _alias,WHATEVER)```    
     
     #. So if we wanted a colored or scaled icon only (with no label or technology), we have to implement it ourselves.
+
+#. Some libaries have an ```all.puml``` that includes all icons and their macros for a given category/subset of icons. This allows including all icons by including one file - rather than an include per icon.
 
 #. The superset of parameters provided by the macros are
 
