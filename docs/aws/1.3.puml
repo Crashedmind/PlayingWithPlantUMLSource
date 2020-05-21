@@ -1,0 +1,13 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+
+EC2(EC2, "Smadex Service", " ")
+Users(Users, "Users", " ")
+TraditionalServer(TraditionalServer, "Ad Exchange", " ")
+Mobile(Mobile, "Publisher app or web", " ")
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+
+EC2(EC2, "label", "tech")
+Users(Users, "label", "tech")
+TraditionalServer(TraditionalServer, "label", "tech")
+Mobile(Mobile, "label", "tech")
+
+@enduml
