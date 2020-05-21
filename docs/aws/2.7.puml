@@ -105,8 +105,8 @@ ImageConversionLambdaFunction -down-> S3Images
 S3Images -down-> SQSConvertedImageQueue
 SQSConvertedImageQueue -left-> LambdaInferenceInvocation
 LambdaInferenceInvocation -down-> Aurora
-'LambdaInferenceInvocation -left-> APIGateway
-'APIGateway -left-> SageMaker
+LambdaInferenceInvocation -left-> AmazonAPIGateway
+AmazonAPIGateway -left-> AmazonSageMaker
 
 
 'bottom left section 
@@ -116,7 +116,7 @@ CloudWatch(CloudWatch, "Amazon Cloudwatch", " ")
 SNS(SNS1, "Amazon SNS", "")
 SESEmail(SESEmail, "Email Notification", "")
 
-CloudWatch --> DLQ
-CloudWatch -down-> SNS1
-SNS1 -down-> SESEmail
+CloudWatch -right-> DLQ
+CloudWatch -left-> SNS1
+SNS1 -left-> SESEmail
 @enduml
