@@ -1,5 +1,8 @@
 @startuml
 
+'all sprites in a category would be included in an all.puml file for that category
+'==================================================================================================
+
 'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
 sprite $Batch [64x64/16z] {
 xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
@@ -42,7 +45,8 @@ $label
 !endprocedure
 
 'stdlib macros pass the sprite to the decorator - and the other parameters
-'-------------------------------------------------------------------------
+'all this would happen in an all.puml file per sprite category
+'==================================================================================================
 !unquoted procedure $BATCH($alias, $description="", $label="", $technology="", $scale=1, $colour="red")
 $SpriteDecorator($Batch, $alias, $description, $label, $technology, $scale, $colour)
 !endprocedure
