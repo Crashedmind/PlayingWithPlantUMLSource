@@ -6,6 +6,9 @@
 
 #this is required because we are including html in an rst file and so sphinx does not copy the file for us to docs/build
 cp docs/networkusers.png docs/build/
+cp docs/about/c4.png docs/build/about
+cp docs/about/aws.png docs/build/about
+cp docs/networkusers.png docs/build/
 
 docker run -u `id -u $USER`:`id -g $USER` -i  --rm -v $(pwd):/home/documentation -t docdac:ubuntu-1.0 bash ./_sphinx_build.sh
 
