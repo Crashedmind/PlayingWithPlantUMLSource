@@ -9,14 +9,16 @@
 **** kubernetes
 *** Sprites and Macros
 **** Type 1
-***** aws 
-***** osa
-***** elastic
+***** aws (origina)
+****** osa
+****** elastic
 **** Type 2
 ***** azure
-***** awslib (newest)
+****** awslib (newest)
+**** Type 3
 ***** office
-***** cloudogu
 ***** tupadr3
+****** cloudogu
+**** Type 4
 ***** material
 @endmindmap
