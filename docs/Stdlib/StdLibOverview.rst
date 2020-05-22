@@ -163,11 +163,10 @@ i.e.
 
     !define BatchParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D86613, Batch, Batch)
 
-.. todo ::
-    replace sequence.png with puml file
+.. uml:: sequence.puml
+    :align: center
+    :caption: *Sequence diagram with icons* 
 
-.. figure:: sequence.png
-   :alt: 
 
 Type 3 (_alias, _label, _shape, _color)
 ---------------------------------------------------------------------------------------------------

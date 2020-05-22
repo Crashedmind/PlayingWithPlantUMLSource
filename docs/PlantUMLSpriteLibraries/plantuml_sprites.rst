@@ -205,10 +205,6 @@ More Complex Example
 
 
 
-.. todo ::
-
-    add note about scale - no need for different sizes
-    redo this example with play explore etc...
 
 Create A Sprite
 ===============================================================================

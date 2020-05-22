@@ -242,10 +242,10 @@ Gather the icons we need
     When using ```listsprites``` limit the number of library categories you include to make it easier to search category by category.
     Simplified off (by commenting out the simplified header) so we can see the icon name.
 
-.. uml:: 3.2.puml
+.. uml:: 3.1.puml
     :align: center
     
-.. literalinclude:: ./3.2.puml
+.. literalinclude:: ./3.1.puml
     :linenos: 
     :emphasize-lines: 12       
 
