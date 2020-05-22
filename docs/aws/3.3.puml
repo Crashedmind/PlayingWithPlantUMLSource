@@ -1,0 +1,30 @@
+@startuml
+!include <awslib/AWSCommon>
+'!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+
+Appstream2_0(Appstream2_0, " ", " ")
+AutoScalingGroup(AutoScalingGroup, " ", " ")
+EC2Instance(EC2Instance, " ", " ")
+InternetAlt1(InternetAlt1, " ", " ")
+DirectConnect(DirectConnect, " ", " ")
+VPCVPNConnection(VPCVPNConnection, " ", " ")
+VPCSubnetPublic(VPCSubnetPublic, " ", " ")
+VPCSubnetPrivate(VPCSubnetPrivate, " ", " ")
+VPCInternetGateway(VPCInternetGateway, " ", " ")
+VPCCustomerGateway(VPCCustomerGateway, " ", " ")
+TransitGateway(S3TransitGatewayStaging, " ", " ")
+VPCElasticNetworkInterface(VPCElasticNetworkInterface, " ", " ")
+ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, " ", " ")
+
+Cloudalt(Cloudalt, " ", " ")
+
+@enduml

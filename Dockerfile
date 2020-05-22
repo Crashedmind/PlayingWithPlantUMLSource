@@ -41,6 +41,8 @@ RUN mkdir -p /usr/share/man/man1 \
 
   # Plantuml + Java content adds ~300MB to image size
 
+COPY ./plantuml.1.2020.10.jar /usr/share/plantuml/plantuml.jar
+
 #env setup
 ENV GRAPHVIZ_DOT=/usr/bin/dot
 

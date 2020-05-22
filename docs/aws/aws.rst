@@ -16,37 +16,44 @@ Create Real Life AWS Diagrams
 .. _Running: https://plantuml.com/running
 .. _PlantUMLActions: https://github.com/marketplace?query=plantuml
 .. _AWSArchitectureBlog: https://aws.amazon.com/blogs/architecture
-
+.. _AWSArchitectureBlogSample1: Helping Global Remote Working with Amazon AppStream 2.0 https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/
+.. _AWSArchitectureBlogSample2: https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/
+.. _AWSArchitectureBlogSample3: https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/
+.. _Deployment: https://plantuml.com/deployment-diagram
 
 .. note ::
 
-    In this section we'll put PlantUML to the test by seeing if we can recreate some real diagrams from the AWSArchitectureBlog_ .
+    In this section we'll put PlantUML to the test by seeing if we can recreate some real diagrams from the AWSArchitectureBlog_.
 
-    We're aiming for architectural equivalence (not image reproduction).
+    We'll show the original image from the AWSArchitectureBlog_, and the PlantUML version for comparison.
 
-    We will take the 3 most recent entries showing architecture diagrams on the front page as at May 2020.
+    **We're aiming for architectural equivalence (not image reproduction).**
 
-    #. BBVA: Helping Global Remote Working with Amazon AppStream 2.0 https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/
-    #. Building a Scalable Document Pre-Processing Pipeline https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/
-    #. Serving Billions of Ads in Just 100 ms Using Amazon Elasticache for Redis https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/
+We take the 3 most recent entries that show architecture diagrams on the front page of AWSArchitectureBlog_ as at May 2020.
 
-    Then we'll show the original image from blog, and the PlantUML version for comparison.
+#. BBVA: Helping Global Remote Working with Amazon AppStream 2.0 https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/
+#. Building a Scalable Document Pre-Processing Pipeline https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/
+#. Serving Billions of Ads in Just 100 ms Using Amazon Elasticache for Redis https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/
 
-    We'll approach them in order of complexity.
+This sample of 3 diagrams is quite varied in complexity and features.
+
+We'll approach them in order of complexity.
 
 
 
-1
+AWSArchitectureBlogSample1_
 ===============================================================================
 
 Original
 -------------------------------------------------------------------------------
-Original image from AWSArchitectureBlog_ "Serving Billions of Ads in Just 100 ms Using Amazon Elasticache for Redis" https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/
 
 .. figure :: ./High-level-digram-1-Smadex-1024x584.png
+    
+    AWSArchitectureBlogSample1_
 
 PlantUML Equivalent
 -------------------------------------------------------------------------------
+
 .. uml:: 1.7.puml
     :align: center
 
@@ -66,20 +73,20 @@ ref: https://github.com/awslabs/aws-icons-for-plantuml
 Gather the icons we need
 --------------------------------------------------------------------------------
 
-For AWS icons, Orange is AWS Compute so let's take a look at the compute icons.
-Yes, that's the EC2 icon on right of diagram (which is part of AWS Compute). 
+* For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons. 
+* Use our github trick to find "users"; they are in General.
+* The green box isn't an AWS service - it's showing a mobile/laptop client.
+* We need "Traditional Server" for "Ad Exchange"
+* For the box we'll use a Deployment_ Diagram shape; ```package``` or ```cloud```
 
-Use our github trick to find "users"; they are in General.
-
-The green box isn't an AWS service - it's showing a mobile/laptop client.
-Traditional Server
-
-We need "Traditional Server" for "Ad Exchange"
 
 .. note ::
 
-    ```autonumber``` does not work in these diagrams.
+    ```autonumber``` does not work in these diagrams. So we will manually number the arrows.
 
+.. todo ::
+
+    ask @Arnaud about autonumber of sprite diagrams
 
 
 .. uml:: 1.puml
@@ -88,61 +95,77 @@ We need "Traditional Server" for "Ad Exchange"
 .. literalinclude:: ./1.puml
     :linenos: 
 
+
+
 Find Icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.1.puml
     :align: center
     
 .. literalinclude:: ./1.1.puml
     :linenos: 
+    :emphasize-lines: 7
 
 Add Text To Icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.2.puml
     :align: center
     
 .. literalinclude:: ./1.2.puml
     :linenos: 
+    :emphasize-lines: 7-10    
 
 Simplify The Icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.3.puml
     :align: center
     
 .. literalinclude:: ./1.3.puml
     :linenos: 
+    :emphasize-lines: 3
 
 Connect The Icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.4.puml
     :align: center
     
 .. literalinclude:: ./1.4.puml
     :linenos: 
+    :emphasize-lines: 13-17
 
 Change the Layout: ortho
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.5.puml
     :align: center
     
 .. literalinclude:: ./1.5.puml
     :linenos: 
+    :emphasize-lines: 8,9    
 
 Change the Layout: polyline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.6.puml
     :align: center
     
 .. literalinclude:: ./1.6.puml
     :linenos: 
+    :emphasize-lines: 8,9        
 
 Add A Box: package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. uml:: 1.7.puml
     :align: center
     
 .. literalinclude:: ./1.7.puml
     :linenos: 
+    :emphasize-lines: 12       
 
 
 
@@ -156,34 +179,45 @@ Add A Box: package
 
 
 
-2
+AWSArchitectureBlogSample2_
 ===============================================================================
 
 Original
 -------------------------------------------------------------------------------
-Building a Scalable Document Pre-Processing Pipeline https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/
 
 .. figure :: ./Pre-processing-pipeline-architecture-SM.jpg
-
+    
+    AWSArchitectureBlogSample2_
     
 PlantUML Equivalent
 -------------------------------------------------------------------------------
 
-.. figure :: 2.8.png
+.. uml:: 2.8.puml
+    :align: center
+    
 
+.. tip ::
+    In general, I recommend starting a diagram without forcing the arrow directions to let PlantUML optimise the layout; then tweak the result.
+    
+    Because we are trying to compare to an existing complex diagram, I will force the layout to match the original - but only up to a point that allows clarity and comparison.
 
-.. todo ::
-    update docker version of plantuml so awslib icons are available - screenshot of plantuml server for now
+.. tip ::
+    Because there are a lot of parts to this diagram, I built it step-by-step in sections to validate as I went - which makes it easier to fix a typo, or get feedback as we go.
+    Not all steps are shown here - only the final ones - but the PlantUML source code files for each step are in the directory with the source and documentation.
 
+First Pass
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. uml:: 2.6.puml
     :align: center
     
 .. literalinclude:: 2.6.puml
     :linenos: 
 
-
-For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.
-Use together to group the SQS and File processing icons.
+Second Pass: Tweak
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.
+#. Use ```together``` to group the SQS and File processing icons.
+#. I did not change the boxes line style or colour. 
 
 .. uml:: 2.8.puml
     :align: center
@@ -193,20 +227,27 @@ Use together to group the SQS and File processing icons.
 
 
 
-.. comment 
-
-    http://www.plantuml.com/plantuml/uml/hLRHZgis47ttLxZx0fMQUzNajRgwQJQxYhIxxOfA-rWvC25eZOsCsIYj-kyTR6oJnD27RgG8VCwP6NDcZFZUQgPqLtFoGoLotXL0Vs6dbbVxh-ktR2FhMeflKIwhwePNXmgABmt6HqGOtNGQlZBEfoIrt5TyLb620CNudEHHoQxPvLAqSwfCIyNAsLhFJA2Y1g7NedYK7w044_bioAPhjQn1RKKvXCuNo8-LW2TWIbIYd9E-W3v9zOugtCj62esfxu5NkAdpNDmzqspFsjbDhnliNCvq9SKE4vVAt8uYy9UuxZtQ1f346MWQ3yCg0_LHvP2jlZIY9Cb4vkmrixnB-iJgVS4kiUrcIPAf5coux8etflEZ3OhudcspRSqgRWNNLcSeUsRle2oTFDl9M_--UsGQJkniyLdRWtXfrTxiTQVGZl_ouBM33eo849gqMALXYjMKuqRrkG7QI7xk5oIX4LOgVPJO6IqRok6WQGjvdvgIPF5_VgHX-JlQGx43V-v4gtl7wTzaw7ow4oMqVI5yif_edLzINDyXGEz-zDhDiHF6FIDrA_gRoeyOfDXrt3-4nESfpLQPPYK6et9TixymBblH0QE_TlaxQ9S5lKtnRtSMz0XHYr5ZlPCJEtwflVoXgh84rOUzPTHYT03fGoUCnrUXZbvqpU8R7Hj4nek1zriZ_euk2daIo8qC8_wHFJlkoD1vh7pyjDOxvvwOAk6Xuc1ykdJGSBGdBrnqeLdDE9y8DTnCA3ugdofhoKWmGLDIl-6HVuYZPBHTnr4aAQP5WKjoCG7-4Lm0YWnsbSQghrBiQbR2HeeFK2rsnA9kR51gU1e4GvRRoSBk5f8Mh3r2OGuztSjE54oT_G6zVth5S-dU92akVyPel0HZ0xMSfbQUSeTmP2DTc173wRiPZ4cPTt1ETjDmGcug1Fb4Xya4RezCT3SUYHM9zfzCuBP8_5ay52apEoEHpaTySPNxdlidYjBBi9Kelo9OSI-rblNdlancNkN6WFRYJMwXonUvEThunrq-i8gtx03ONJkir24tfzc_Jwp36WgJE_9EyG9RdHf9z9Mm4mTG87BOYG-PCtUM7KezF7cUxIT1QYzX6tRjH4duf4Yj800X1Z4wW7sC_vGPGlmwH7Y8RaNHo4fe32JzxFX9kB6vfvVpz6g69ZTGc7yt08JCdWIVtUlTZMVYNIPnc2uu7FhwapqbauolQ1j6aacbhn9QD-whftrFmldxtCyu4ZwIqt0RXi9WfnxpuvUzP2d-WmON1X--fLDtWmfpfIzILuVXynQLevgXtJW690c4jnAJcv8USDa9-GwYw6fE_WK0
-
-    http://www.plantuml.com/plantuml/uml/hLPHRzis47xdhxZbnHemjsZyEXJr72Sma6GBDA2F0osTPI4KAL1K3A_eVzz952bPbZXiJG1NulTznoE_ExBwKXckJLq8zbCk4r6d2B_oKoNo_SVrrtYZYaB9pvDSd1Ubo0yvfXzAYfyGKNHP6_p8XPYJ56gVYw0YGucQYv3aGQkwt2LALY5LR9JcMJ3N4vUaA52QjKmVr1jgoMKI3DdKbL45wgtCkj1mWkIOItn4hcKkiv3q6Sr9wLTIqLesIXgQ-Wv5JeiwX-BkkE5xNWKNlIwfSWatkP8xcZZJxUl_Y8YVu_zWJBoDjmNFNHBwMxWMUR1LPWjNfRQxi1l5gD_o1EFLXr9cR36tc9VOycxIHrxiKtw9RJUtR35NvurGTVgLc-HeWm9xi89nFMEIFV5Nr9PUFDdsNl-nU-06J_niyM1jU_6jLVkAhcjDTloR1oyrrjYA6AieHyarBq3GCisvH2YLE3S3je09LcbpL5GNeqeGU31GOT9C36on_94_LlBabSm1yl-ldQnCupTyOrtTevtCi6eIqRv-WHi_11hV400tFtljvbZBnZihTIFuNIT72j9y7FUTiUbkYk9LR7X6mQHS5_nlYejNq67mMvsyed6paBCH_UpAUZr1O35eZNToPfiliey_TPvbg8cZYnCi1Xq8zxLiFHw5EdfPbylFC3I83GSTxvV6_1iiKtMIn0qCOtxBdXrMfAiyPJw-N-cDoj0SKSCtP-8ZrndUvm9RooxDR3beo0j3NMXSS25cGbik44gx5dDfBJaHpCYVo2zuO2NX91airt509D2q972JN3I3tu8B856BZQQnwj4Kku9dk56IhegAYcDHrq4aRNde1M0LLqtslQbqgY3brH7JzWA0lQfbolNP7zQxnnTRjDQHY8QVA9mUlRCzTJjFhHpb3-J0HrYsxKQTUDKPip9lOL0shZXZLnbw-Ko9sGnkZy_aQZmoaMIw0TWCRfDCxyL34sc2JSAkAt_jYy_SrDplQ9A-dLnApwyOPTmhOrJnlXTBu5fl3QWkRdKBZIxrvcpJZrPvptDHyGFQ_rG808TS7MT_eLY73QRjt1ENYXVOxD1A9k-4dJoWHfdWJhwfXBl3x53myEo1jXy7aNtqox1ZB_BV5f7bUw0F8Gmwi8cZCFzPqqNvSH_a8TZAj5IvD5qiQph8zyELsGrz6wPN0PfTGVqfS6t0MF0y-DczthruPhhMR1g6fS13at-sicoMyHbjsUQ5FicuZ6mCUEMeTFsfVDyFFTP_H4VzQzyeBNPgC7-QdkE8Vfzw3OrSvtMVsv5x8RXzmhCo-I6tRbZnC7NV1TGT0zoxqIHapJyUSHdO5vHfNOX_0000
-
-
-3
+AWSArchitectureBlogSample3_
 ===============================================================================
 
-
 .. figure :: ./BBVA-uses-AWS-Transit-Gateway-to-build-a-hub-and-spoke-network-topology-2.png
+    
+    AWSArchitectureBlogSample3_
 
-BBVA: Helping Global Remote Working with Amazon AppStream 2.0 https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/
+Gather the icons we need
+--------------------------------------------------------------------------------
+* For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons. 
+
+.. tip ::
+    When using ```listsprites``` limit the number of library categories you include to make it easier to search category by category.
+    Simplified off (by commenting out the simplified header) so we can see the icon name.
+
+.. uml:: 3.2.puml
+    :align: center
+    
+.. literalinclude:: ./3.2.puml
+    :linenos: 
+    :emphasize-lines: 12       
 
 
 

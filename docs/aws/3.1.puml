@@ -1,0 +1,31 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+'!include <awslib/Compute/all.puml>
+'!include <awslib/mobile/all.puml>
+'!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+listsprites
+
+'Appstream2_0
+'AutoScalingGroup
+'EC2Instance
+'InternetAlt1
+'DirectConnect
+'VPCVPNConnection
+'VPCSubnetPublic
+'VPCSubnetPrivate
+'VPCInternetGateway
+'VPCCustomerGateway
+'TransitGateway
+'VPCElasticNetworkInterface
+'ELBNetworkLoadBalancer
+
+'Cloudalt
+
+@enduml

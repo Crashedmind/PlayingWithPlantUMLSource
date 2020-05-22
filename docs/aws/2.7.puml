@@ -12,8 +12,9 @@
 !include <awslib/NetworkingAndContentDelivery/all.puml>
 !include <awslib/Database/all.puml>
 !include <awslib/ApplicationIntegration/all.puml>
-!include <awslib/ApplicationIntegration/SNS.puml>
-!include <awslib/CustomerEngagement/SESEmail.puml>
+
+
+
 
 
 
