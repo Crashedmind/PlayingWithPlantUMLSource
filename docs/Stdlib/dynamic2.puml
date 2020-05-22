@@ -1,0 +1,111 @@
+@startuml
+'all sprites in a category would be included in an all.puml file for that category
+'==================================================================================================
+
+'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+
+
+
+
+
+' We define 1 or more sprite decorators in stdlib
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="red")
+
+rectangle $alias as "
+<<$alias>>
+$label
+<color:$colour><$MySprite*$scale></color>
+//<size:12>[$technology]</size>//
+
+  $description"
+!endprocedure
+
+'add a new shape parameter
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator2($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="red", $shape="node")
+
+$shape $alias as "
+<<$alias>>
+$label
+<color:$colour><$MySprite*$scale></color>
+//<size:12>[$technology]</size>//
+
+  $description"
+!endprocedure
+
+'add a new shape parameter + a mystery parameter
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator3($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="red", $shape="cloud", $mystery="x?x?")
+
+$shape $alias as "
+<<$alias>>
+$label
+<color:$colour><$MySprite*$scale></color>
+//<size:12>[$technology]</size>//
+
+  $description $mystery"
+!endprocedure
+
+
+
+
+
+
+
+' Define our decorators that we know now - and can easily define new ones in future with as manty new parameters 
+' as we want, that we don't even know about yet
+$SpriteDecorator("$Batch", "somealias1")
+$SpriteDecorator2("$Batch", "somealias_2", $shape="node")
+$SpriteDecorator3("$Batch", "somealias_3", $shape="cloud", $mystery="0")
+
+
+
+'this does not work directly as $SpriteDecorator - so we do indirect as the following line
+!$dyn = "$Sprite"+ "Decorator"
+%invoke_procedure($dyn, "$Batch", "somealias_dyn1")
+
+!$dyn2 = "$Sprite"+ "Decorator2"
+%invoke_procedure($dyn2, "$Batch", "somealias_dyn2")
+
+!$dyn3 = "$Sprite"+ "Decorator3"
+%invoke_procedure($dyn3, "$Batch", "somealias_dyn3")
+
+
+
+
+'stdlib macros pass the sprite to the decorator - and the other parameters
+'all this would happen in an all.puml file per sprite category
+'==================================================================================================
+
+
+
+!unquoted procedure $BATCH($alias, $description="", $label="", $technology="", $scale=1, $colour="red")
+$SpriteDecorator($Batch, $alias, $description, $label, $technology, $scale, $colour)
+!endprocedure
+
+$BATCH("sdsd", "", "")
+
+
+
+!unquoted procedure $BATCH_DYN($dynamic, $Batch, $alias)
+%invoke_procedure($dyn, $Batch, $alias)
+
+!endprocedure
+
+$BATCH_DYN(dyn2, $Batch, "sdasdf")
+$BATCH_DYN(dyn2, $Batch, "test")
+$BATCH_DYN(dyn2, $Batch, "test2")
+
+
+
+'if this works, then can add named arguments
+@enduml
