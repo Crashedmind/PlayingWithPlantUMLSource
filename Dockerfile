@@ -43,6 +43,8 @@ RUN mkdir -p /usr/share/man/man1 \
 
 COPY ./plantuml.1.2020.10.jar /usr/share/plantuml/plantuml.jar
 
+RUN pip3 install sphinx-panels
+
 #env setup
 ENV GRAPHVIZ_DOT=/usr/bin/dot
 

@@ -45,7 +45,8 @@ extensions = [
               "sphinxcontrib.yt",
               "sphinx.ext.todo",
               "sphinxcontrib.confluencebuilder",
-              'sphinxcontrib.twitter'
+              "sphinxcontrib.twitter",
+              "sphinx_panels"
              
 ]
 

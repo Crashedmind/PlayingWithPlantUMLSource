@@ -236,7 +236,6 @@ AWSArchitectureBlogSample3_
 
 Gather the icons we need
 --------------------------------------------------------------------------------
-* For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons. 
 
 .. tip ::
     When using ```listsprites``` limit the number of library categories you include to make it easier to search category by category.
@@ -247,14 +246,24 @@ Gather the icons we need
     
 .. literalinclude:: ./3.1.puml
     :linenos: 
-    :emphasize-lines: 12       
 
 
 
+Add Text and Simplify The Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. uml:: 3.3.puml
+    :align: center
+    
+.. literalinclude:: ./3.3.puml
+    :linenos: 
+
+
+Connect The Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. todo ::
-    recover info from png with plantuml
-    High-level-digram-1-Smadex-1024x584.png
-    https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png
+    finish aws 3 diagram - figure out best way to do boundaries
+    https://github.com/dcasati/kubernetes-PlantUML uses the c4 type boundary macros 
+
