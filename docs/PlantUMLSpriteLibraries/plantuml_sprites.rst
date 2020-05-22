@@ -266,13 +266,6 @@ Create Diagram With Our Sprites
 
 
 
-.. todo ::
-    look later at some more exotic options
-        https://github.com/executablebooks/sphinx-panels
-        https://sphinx-book-theme.readthedocs.io/en/latest/launch.html
-        https://stackoverflow.com/questions/20303335/ipython-notebook-plantuml-extension
-
-
 
 Images
 ===============================================================================
