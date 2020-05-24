@@ -5,19 +5,6 @@ Standardising Standard Library 2
 *******************************************************************************
 
 
-.. todo :: 
-
-    this salt diagram does not work so use png for now
-
-    .. uml:: stdlibFileLayout.puml
-        :align: center
-        :caption: *Plantuml Stdlib File Layout* 
-
-
-Plantuml Stdlib File Layout
-===============================================================================
-
-.. figure :: stdlibFileLayout.png
 
 
 Plantuml Stdlib Terminology
@@ -72,9 +59,38 @@ Plantuml Stdlib Terminology
 
 
 
+
+
+Plantuml Stdlib File Layout
+===============================================================================
+
+.. figure :: stdlibFileLayout.png
+
     
 
 
+Standardising Sprites
+===============================================================================
+
+.. csv-table:: Sprite Property
+   :header: "Property", "Value"
+   :widths: 10, 50
+
+    "**XxY**", "128x128
+        
+        Sprite resolution SHOULD be this value or close to it.
+
+        Current sprite libraries range from ~40 to 256.
+        "  
+    "**Levels**", "16
+            
+            Sprite resolution SHOULD be this value.
+
+            4, 8, 16 are the possible options.
+        "  
+
+.. note ::
+    ref: https://tools.ietf.org/html/rfc2119 for SHOULD, MUST, MAY meaning
 
 Standardising Icon Macro API
 ===============================================================================
@@ -110,3 +126,17 @@ Mode Example
     :linenos: 
     
 
+MACRO($alias="alias", $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="rectangle", $label_textsize="18")
+
+
+
+.. todo :: 
+
+    this salt diagram does not work so use png for now
+
+
+
+
+    .. uml:: stdlibFileLayout.puml
+        :align: center
+        :caption: *Plantuml Stdlib File Layout* 
