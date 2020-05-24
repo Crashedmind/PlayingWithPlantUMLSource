@@ -8,7 +8,7 @@ Standardising Standard Library 2
 .. todo :: 
 
     this salt diagram does not work so use png for now
-    
+
     .. uml:: stdlibFileLayout.puml
         :align: center
         :caption: *Plantuml Stdlib File Layout* 
@@ -20,6 +20,8 @@ Plantuml Stdlib File Layout
 .. figure :: stdlibFileLayout.png
 
 
+Plantuml Stdlib Terminology
+===============================================================================
 
 .. csv-table:: Plantuml Stdlib Terminology
    :header: "Term", "Meaning"
@@ -45,23 +47,6 @@ Plantuml Stdlib File Layout
         
         The call from the user puml file is a macro."     
     "**Sprite**", "A 2D bitmap"     
-
-
-  
-
-**Do we need individual sprite files? e.g. awslib/ARVR/Sumerian.puml and associated png (or svg), as all info is in puml file**
-
-
-
-Plantuml Stdlib Themes, Styles, Layouts
-===============================================================================
-
-.. csv-table:: Plantuml Stdlib Themes Terminology
-   :header: "Term", "Meaning"
-   :widths: 10, 50
-
-
-    
     "**Diagram**", "Everything you see. Everything represented by the puml file"
     "**Style**", "A collection of attributes that specify the appearance for a **single icon**. 
     
@@ -80,5 +65,48 @@ Plantuml Stdlib Themes, Styles, Layouts
     "**Layout**", "An arrangement of fields, objects, pictures, and layout parts that represents the way information is organized and presented."
 
 
+
+  
+
+**Do we need individual sprite files? e.g. awslib/ARVR/Sumerian.puml and associated png (or svg), as all info is in puml file**
+
+
+
+    
+
+
+
+Standardising Icon Macro API
+===============================================================================
+
+.. csv-table:: Plantuml Stdlib Macro API Modes
+   :header: "Mode", "Details"
+   :widths: 10, 50
+
+    "**Standard**", "Keyword arguments **SHOULD** be used for all parameters per todo ref
+    
+        This gives future proofing: as new parameters are added over time, 
+            
+            user specifies only the parameter they care about
+            
+            for the parameter they care about, only named keyword arguments are used
+        "  
+    "**Legacy**", "To work with a subset of *existing user diagrams*, new macros will enforce the parameter ordering per Type 2
+    
+        e.g. *!define AzureBatchAI(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureBatchAI, AzureBatchAI)*
+    
+        **Existing macros in existing libraries should be kept, even when a newer keywords arguments mode is added** 
+        This ensures backwards compatiblity of PlantUML Stdlib with existing user diagrams.
+    " 
+    "**Mixed**", "This mix of ordered parameters, with keyword parameters is also possible.
+
+         This is not as future proof as Standard mode.
+    "      
+
+Mode Example 
+-------------------------------------------------------------------------------
+
+.. literalinclude:: modes.txt
+    :linenos: 
     
 

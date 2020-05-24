@@ -1,0 +1,17 @@
+#Legacy
+#ordering does matter
+ExistingMacro("alias", "label", "techn", "descr")
+
+#Standard
+#keyword arguments for all parameters
+#ordering does NOT matter
+NewMacro(alias="myalias", label="mylabel", techn="mytechn", descr="mydescr", newParam1="whatever", newParam2=3)
+NewMacro(techn="mytechn", alias="myalias", descr="mydescr", newParam1="whatever", label="mylabel", newParam2=3)
+
+#Mixed
+#if we don't use keyword arguments then same as ExistingMacro
+#ordering does matter
+NewMacro("alias", "label", "techn", "descr")
+
+#ordering does matter for existing parameters only
+NewMacro("alias", "label", "techn", "descr", newParam1="whatever", newParam2=3)
