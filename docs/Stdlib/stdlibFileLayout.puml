@@ -1,0 +1,12 @@
+@startsalt
+{
+{T
+ + **PlantUML stdlib**
+ ++ **library** e.g. awslib
+ +++ **library category** e.g. awslib/ARVR
+ ++++ **sprite** e.g. awslib/ARVR/Sumerian
+ ++++ **all.puml** file e.g. awslib/ARVR/all.puml
+ 
+}
+}
+@endsalt
