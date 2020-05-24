@@ -120,13 +120,66 @@ Standardising Icon Macro API
     "      
 
 Mode Example 
--------------------------------------------------------------------------------
+===============================================================================
 
 .. literalinclude:: modes.txt
     :linenos: 
     
+Mode Demo
+===============================================================================
 
-MACRO($alias="alias", $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="rectangle", $label_textsize="18")
+
+Main features
+----------------
+
+The demo uses most of the avaialable Preprocessor features (https://plantuml.com/preprocessing)
+
+#. User specifies only the parameters they care about. Preprocessor "Keywords arguments" used.
+#. If user does not specify the parameter, then the default value is used. Preprocessor "Default argument value" used. 
+#. ```rectangle $alias <<$alias>>``` is in form ```shape alias <<stereo>>``` where skinparam can be specified for a stereo per https://plantuml.com/skinparam last example
+#. Dynamic invocation to somewhat decouple the sprite, parameters, and layout. **Not as decoupled as I'd like** as still need to pass all params for each sprite at definition time.
+#. https://plantuml.com/preprocessing Conditions to show 
+
+    #. technology "[ ]" only if technology specified. 
+    #. focus hi/lo/normal based on parameter which changes skinparams for the stereo (where alias is used as stereo)
+#.  '""== $label\n": "==" is creole syntax for "Large heading" (https://plantuml.com/creole)
+#. icon fields are laid out line-by-line for clarity
+#. parameters supported are 
+
+    #.  $MySprite, 
+    #.  $alias, 
+    #.  $description="", 
+    #.  $label="", 
+    #.  $technology="", 
+    #.  $scale=1, 
+    #.  $colour="blue", 
+    #.  $shape="cloud", 
+    #.  $textsize="18", 
+    #.  $focus="" 
+
+In the full demo, the sprite decorator is selected by user via e.g. '!includeurl AWSPuml/SpriteDecorators.iuml!SPRITEDECORATOR_3. 
+This uses the "File List.iuml" block include Preprocessor feature
+
+
+
+
+.. uml:: dynamic3.0.puml
+    :align: center
+    :caption: *<API proposal demo>* 
+
+Full code applied to PlantUML Stdlib is in
+https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec366c028fe60032dc0
+
+Below is a standalone file version of it.
+
+.. literalinclude:: dynamic3.0.puml
+    :linenos: 
+    :emphasize-lines: 128, 137, 154, 154-157
+
+    
+
+
+
 
 
 

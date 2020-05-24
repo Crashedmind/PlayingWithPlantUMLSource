@@ -163,3 +163,19 @@ Play with StdlibProposalCode_ online.
     :linenos: 
     :emphasize-lines: 37, 50, 63, 102, 106,110, 83, 86, 89
 
+
+.. todo ::
+
+::
+    @startuml
+    usecase UC1 as "
+    = Extra-large heading
+    Some text
+    == Large heading
+    Other text
+    === Medium heading
+    Information
+    ....
+    ==== Small heading"
+    @enduml
+

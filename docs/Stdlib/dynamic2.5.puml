@@ -1,0 +1,200 @@
+@startuml
+'all sprites in a category would be included in an all.puml file for that category
+'==================================================================================================
+
+
+
+
+' Colors
+' ##################################
+!define AWS_COLOR #232F3E
+!define AWS_BG_COLOR #FFFFFF
+!define AWS_BORDER_COLOR #FF9900
+!define AWS_SYMBOL_COLOR AWS_COLOR
+
+' Styling
+' ##################################
+
+!define TECHN_FONT_SIZE 12
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+!definelong AWSEntityColoring(stereo)
+skinparam rectangle<<stereo>> {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor AWS_BORDER_COLOR
+}
+skinparam participant<<stereo>> {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor AWS_BORDER_COLOR
+}
+!enddefinelong
+
+' Layout
+' ##################################
+
+!definelong LAYOUT_AS_SKETCH
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+skinparam defaultFontName "Comic Sans MS"
+center footer <font color=red>Warning:</font> Created for discussion, needs to be validated
+!enddefinelong
+
+!define LAYOUT_TOP_DOWN top to bottom direction
+!define LAYOUT_LEFT_RIGHT left to right direction
+
+
+
+sprite $Analytics [64x64/16z] {
+xTK5WiGW38NXbn1WGkv_tjMwDwml__YqNrtmNRK8tISXfBj5W4UVhDpBTExBtVweRxvv5TfCz9eNnCqWrpo9bOrCwAelc_bzJYdNU0QWvlTAe0glJ14-tt7L
+w5d_h6yBJ-hR_W9wMCSTNf0OiUFtVCUj23f-smjojmbSNiR_7BwRkz-dN7l-k7pz-IyXWC9cX13ap3CuxCRWCwyGsqsWPxvaIDn9a2zilqYxnJzv_sg-UQlp
+KU_sc7b77-V1mHEFioLN-0iz0m
+}
+
+!unquoted procedure $ANALYTICS ($alias, $description="", $label="", $technology="", $scale=1, $colour="693CC5", $shape="rectangle", $textsize="12", $focus="")
+%invoke_procedure($SpriteDecorator, "$Analytics", $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+!endprocedure
+
+
+sprite $AppSync [64x64/16z] {
+xPRdrkCW34IlGAYmx_-yMr89PwtZBxzzquF6rWoupFznSN6HuVONZ_n6x5ru8DtpX-eX85tjBze5PEGyZmcevxiNXJY_SmNTTXT-NjveHVK9US_vFGsTXqJa
+h55w8GVfmuie7SbLCCPQRDp9G_F26jq066jpYBiU6pJMiK3CX5YpOSm2uRFTSNzxaBH4idBVvwuVs3ByIx4gVD_IqB6iN1URGQ_Qpsrxi2QIVuVbs43Izjcu
+vxVIYMFxEbVqvdzhU6m1R7ajn3rhmOkY5VlSTBl_z4zNVbPlJrt7JkhVGp5KY9SF7R4LrVaPG7iR0MpBhvg_5CmRbZUCvWQvp5-nVZBotaZmmfUbAMIvVXsz
+Br97sWt1vkntVRr-dNxtr-W3_9aVsf_7dMBryNlp5mtUXGQqk-lakFt8QNIHMvtxgsxzDHZ5kQifeFEOe3Zwj06K_bevEjErIPmukHTa9PUStwD8VA-EHZil
+zwqq1p-vh2RqxVv1R9udJO2czfTHtB-KKxdSFzbNkTVtRnSN5ty
+}
+
+!unquoted procedure $APPSYNC ($alias, $description="", $label="", $technology="", $scale=1, $colour="CC2264", $shape="rectangle", $textsize="12", $focus="")
+
+%invoke_procedure($SpriteDecorator, "$AppSync", $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+
+!endprocedure
+
+sprite $ApplicationIntegration [64x64/16z] {
+xTO5GiOm30NWbwIIXFlVbxL8AROrmzdxPVfDQ_YkNA67AK7AQZB0mvSRNupDtdikVtahxyHslH5eAkBJ4jcUBr0RSH6t4KNPzMG-qloJ6Erx36zLUVPOyPK0
+nBr2L2M5VQ8-5_ViST_dgdkjOMyC4KYRrPoAhNgtp4pDLu31jkP7-J7Qh295lQBsrt7Caxyu_wDtslUG5dLBRKea8kZNZpPtm3CBi7d6WvUqUMavUFsK-bEt
+kVuTl7vxzDfyfFoaVlsqpGddL9UzSTlOdBIjQTMxbPIrB-QsggxwEPI-pPTidazSlm24x77FEQj7VQJyKDp7-wzu_tc-_xx6FvVFjXgTV20Vvy4I2O_JKYZu
+2xa5
+}
+
+!unquoted procedure $APPLICATIONINTEGRATION ($alias, $description="", $label="", $technology="", $scale=1, $colour="CC2264", $shape="rectangle", $textsize="12", $focus="")
+
+%invoke_procedure($SpriteDecorator, "$ApplicationIntegration", $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+
+!endprocedure
+
+
+
+
+'=============================DECORATORS==================================
+' We define 1 or more sprite decorators in stdlib
+' Define our decorators that we know now - and can easily define new ones in future with as manty new parameters 
+' as we want, that we don't even know about yet
+' Let's say SpriteDecorator is defined month 1, SpriteDecorator2 is defined month 2, SpriteDecorator3 is defined month 3
+'
+' https://plantuml.com/preprocessing Conditions to show technology "[ ]" only if technology specified
+'""== $label\n": "==" is creole syntax for "Large heading" https://plantuml.com/creole
+' rectangle $alias <<$alias>> is in form "shape alias <<stereo>>" where skinparam can be specified for a stereo per https://plantuml.com/skinparam last example
+' https://plantuml.com/preprocessing Conditions to show technology "[ ]" only if technology specified
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html for all skinparams
+'---------------------------------------------------
+
+
+
+skinparam rectangle {
+backgroundColor white
+}
+skinparam cloud {
+backgroundColor white
+}
+
+'add a new shape parameter + a textsize parameter
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="cloud", $textsize="18", $focus="" )
+
+!if ($focus == "hi")
+    skinparam rectangle {
+        backgroundColor<<$alias>> yellow
+        borderColor<<$alias>> yellow
+        shadowing<<$alias>> true
+        BorderThickness<<$alias>> 20
+    }
+!endif
+
+!if  ($focus == "lo")
+    skinparam rectangle {
+        backgroundColor<<$alias>> gainsboro
+        borderColor<<$alias>> gainsboro
+        shadowing<<$alias>> false
+        
+    }
+!endif
+
+
+!if ($technology == "")
+    $shape $alias <<$alias>> as "
+    == $label\n
+    <color:$colour><$MySprite*$scale></color>
+
+    $description "
+!else 
+    $shape $alias <<$alias>> as "
+    == $label\n
+    <color:$colour><$MySprite*$scale></color>
+    //<size:$textsize>[$technology]</size>//
+
+    $description "
+!endif
+
+!endprocedure
+
+
+
+
+
+
+
+!$SpriteDecorator = "$Sprite"+ "Decorator"
+'%invoke_procedure($dyn3, "$Batch", "dynamic_dec3")
+
+
+'=============================END DECORATORS==================================
+
+
+
+
+' User can specify what they want in order (legacy mode), or via named arugments (standard mode)
+
+'legacy mode
+$ANALYTICS("legacy1", "description", "label", "technology", 1)
+$ANALYTICS("legacy2", "desc", "label", "tech", 2, "brown")
+
+'mixed mode
+$ANALYTICS("no_tech", $shape="cloud")
+
+'standard mode
+
+$APPSYNC($alias="lofocus", $description="description", $label="lo focus", $technology="technology", $focus="lo")
+$APPSYNC($alias="normalfocus", $description="description", $label="normal focus", $technology="technology")
+$APPSYNC($alias="hifocus", $description="description", $label="hi focus", $technology="technology", $focus="hi")
+
+
+$APPSYNC($alias="myalias7", $description="description", $label="label")
+
+
+footer %filename() rendered with PlantUML version %version()
+
+@enduml
