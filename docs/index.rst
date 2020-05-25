@@ -150,14 +150,6 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
    Stdlib/StandardisingStdLib2
 
 
-.. toctree::
-   :maxdepth: 2
-   :numbered:   
-   :caption: Standard Library C4
-   
-   C4/c4
-   C4/C4Stdlib   
-
 
 
 
@@ -165,6 +157,15 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
    :maxdepth: 2
    :numbered:
    :caption: Example galleries
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Annex Standard Library C4
+   
+   C4/c4
+   C4/C4Stdlib   
+
 
 
 .. toctree::

@@ -181,15 +181,3 @@ Below is a standalone file version of it.
 
 
 
-
-
-.. todo :: 
-
-    this salt diagram does not work so use png for now
-
-
-
-
-    .. uml:: stdlibFileLayout.puml
-        :align: center
-        :caption: *Plantuml Stdlib File Layout* 

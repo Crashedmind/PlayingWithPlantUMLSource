@@ -6,7 +6,9 @@
 * You use <u>legacy</u> <b>HTML <i>tag</i></b>
 * You use <u:red>color</u> <s:green>in HTML</s> <w:#0000FF>tag</w>
 ----
-* Use image : <img:http://plantuml.com/logo3.png>
+* image x0.5 : <img:http://plantuml.com/logo3.png{scale=0.5}>
+----
+* image x1.5 : <img:http://plantuml.com/logo3.png{scale=1.5}>
 ;
 @enduml
 

@@ -19,23 +19,3 @@ About PlantUML
      
 
 
-
-
-plantuml.github.io
-===============================================================================
-
-plantuml.github.io_ is the landing page for users of PlantUML.
-
-It is structured to :ref:`delivervalue-label`.
-
-
-
-.. figure:: plantuml.github.io.png
-    :width: 800px
-    :align: center
-    :height: 800px
-    :alt: alternate text
-    :figclass: align-center
-
-    https://plantuml.github.io as at May 2020
-
