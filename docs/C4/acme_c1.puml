@@ -65,5 +65,6 @@ Rel_D(SupplyChain, ProdSystemHost, "Parts")
 Rel_D(InventoryTracking, ProdSystemHost, "Tracking")
 Rel_D(Monitoring, ProdSystemHost, "Monitoring")
 
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 
 @enduml

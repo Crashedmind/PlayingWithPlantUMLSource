@@ -28,4 +28,6 @@ Rel_D(WorkStationPC, Hub, "Drive Production and Info Retrieval")
 Rel(Hub, Unit1, "Connect")
 Rel(Hub, Unit2, "Connect")
 Rel(Hub, UnitN, "Connect")
+
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml

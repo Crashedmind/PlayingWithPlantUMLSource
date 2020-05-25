@@ -13,11 +13,10 @@ About PlantUML
    :end-before: logo-end-content
 
 
-.. todo::
+.. tip ::
 
-    ask @Arnaud to give history and context and his view of plantuml
-
-    https://modeling-languages.com/interview-plantuml/
+    `A coffee with Arnaud Roques (creator of PlantUML) <https://modeling-languages.com/interview-plantuml/>`_ gives a good background to PlantUML from the man himself.
+     
 
 
 

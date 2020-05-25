@@ -110,5 +110,5 @@ package Elastic {
     ElasticSearch -right-> Kibana: Data to View
 
 }
-
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml

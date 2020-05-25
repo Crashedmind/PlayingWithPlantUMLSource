@@ -120,4 +120,6 @@ SESEmail(SESEmail, "Email Notification", "")
 CloudWatch -right-> DLQ
 CloudWatch -left-> SNS1
 SNS1 -left-> SESEmail
+
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml
