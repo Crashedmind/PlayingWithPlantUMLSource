@@ -180,13 +180,13 @@ $ANALYTICS("no_tech", $shape="cloud")
 'standard mode
 
 $APPSYNC($alias="lofocus", $description="description", $label="lo focus", $technology="technology", $focus="lo")
-$APPSYNC($alias="normalfocus", $description="description", $label="normal focus", $technology="technology")
+$APPSYNC($alias="normal", $description="description", $label="normal", $technology="technology")
 $APPSYNC($alias="hifocus", $description="description", $label="hi focus", $technology="technology", $focus="hi")
 
 
 $APPSYNC($alias="myalias7", $description="description", $label="label")
 
 
-footer %filename() rendered with PlantUML version %version()
+footer %filename() rendered with PlantUML version %version()\nhttps://crashedmind.github.io/PlayingWithPlantUML
 
 @enduml
