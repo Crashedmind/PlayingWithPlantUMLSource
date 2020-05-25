@@ -1,5 +1,5 @@
 *******************************************************************************
-Welcome to Playing with PlantUML!
+Welcome to The Hitchhiker's Guide to PlantUML!
 *******************************************************************************
 
 .. _vision: https://www.scaledagileframework.com/vision/
@@ -193,23 +193,25 @@ Imagine
 
    PlantUMLSpriteLibraries/plantuml_sprites
    scale/scale
-   
- 
+   procedures/procedures
    PassSpriteAsParameter/PassSpriteAsParameter
-   NamedArguments/NamedArguments
     
 
-
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Understanding Standard Library 
+   
+   Stdlib/StdLibOverview
+   StdlibUnderTheHood/StdlibUnderstanding
+   Stdlib/StandardisingStdLib
 
 .. toctree::
    :maxdepth: 2
    :numbered:   
    :caption: Standardising Standard Library 
 
-   Stdlib/StdLibOverview
-   StdlibUnderTheHood/StdlibUnderstanding
    Stdlib/stdlibRequirements
-   Stdlib/StandardisingStdLib
    Stdlib/StandardisingStdLib2
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    Stdlib/ContributingToStdlib   

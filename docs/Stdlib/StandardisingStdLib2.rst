@@ -1,7 +1,7 @@
 .. _FunctionPointer: https://www.geeksforgeeks.org/function-pointer-in-c/
 
 *******************************************************************************
-Standardising Standard Library 2
+Standardising Standard Library
 *******************************************************************************
 
 
@@ -174,7 +174,7 @@ Below is a standalone file version of it.
 
 .. literalinclude:: dynamic3.1.puml
     :linenos: 
-    :emphasize-lines: 40, 92, 113, 136
+    :emphasize-lines: 40, 92, 113, 114-118, 136
 
     
 

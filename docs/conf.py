@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Playing with PlantUML'
+project = "The Hitchhiker's Guide to PlantUML"
 
 
 
