@@ -27,6 +27,6 @@ VPCRouter -up-> InternetGateway
 'VPCRouter -up-> FIREWALL1
 'FIREWALL1 -up-> InternetGateway
 
-
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml
 

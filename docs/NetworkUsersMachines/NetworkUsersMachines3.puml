@@ -26,7 +26,7 @@ osa_hub(osa_hub, "label", "tech")
 osa_firewall(osa_firewall, "label", "tech")
 osa_cloud(osa_cloud, "label", "tech")
 
-
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml
 
 

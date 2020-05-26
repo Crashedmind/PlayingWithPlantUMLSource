@@ -10,4 +10,5 @@
 
 listsprites
 
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml

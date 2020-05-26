@@ -25,4 +25,5 @@ osa_hub: <$osa_hub>
 osa_firewall: <$osa_firewall>
 osa_osa_cloud: <$osa_cloud>
 
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 @enduml
