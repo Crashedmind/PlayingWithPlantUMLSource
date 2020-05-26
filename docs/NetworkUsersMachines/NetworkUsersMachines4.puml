@@ -1,11 +1,12 @@
 @startuml
 
-!include ./osa/Common.puml
-!include ./osa/User/all.puml
-!include ./osa/Hardware/all.puml
-!include ./osa/Misc/all.puml
-!include ./osa/Server/all.puml
-!include ./osa/Site/all.puml
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
 
 '. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
 '. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
