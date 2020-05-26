@@ -39,7 +39,7 @@ Here we have a typical network diagram:
 #. Bob is an Accountant in the Accounts team. He has Mac and an iPhone.
 #. They connect to the office server, and via a firewall to the Internet.
 
-There 3 types of element with different properties:
+There are 3 types of element with different properties:
 
 #. Users: Role, Name, Team
 #. Machines: Type, IP address, OS 
@@ -50,12 +50,10 @@ Select an icon library
 The OpenSecurityArchitecture library has a nice set of users and network components so we'll use that.
 
 .. tip ::
-    To see all stdlib icon libraries - do TBD
+    To see all stdlib icon libraries, browse to https://github.com/plantuml/plantuml-stdlib
     
 
 
-
-  
 
 
 
@@ -92,9 +90,10 @@ Play
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Take a look at some other stdlib libraries
+#. Take a look at some other stdlib libraries e.g. awslib_ 
 #. What happens if we don't include any libraries?
- 
+
+.. _awslib: http://www.plantuml.com/plantuml/uml/ROqnoi9044RxFSNyHI1f_bn096AXXOAWOcEpIIRiuEnks9qrhTVmUfx4BKG4xGQ-z-OrKNIGP5dzaUiuzGWpFKMcjbwSzajlhNVpxoqFOnAiDVF_cEqVYFKjyIUXcAB4CP1WL6hmNZ10CMJ8QOjb1G5TZm5xc4WCx5WxEMutSCKGoJieNaTPdTt18An9EcFeWk5nkqTO9SfryMzHDVbVBZy1 
 
 Gather the icons we need
 -------------------------------------------------------------------------------
@@ -164,15 +163,6 @@ Play
                 :target: http://www.plantuml.com/plantuml/uml/XPF1QXin54NtynMA8LI6nWDTTXL8eLaqnT1cLp2AT6qzh966fwSPkkjlzFVw9PM9uuGsSbO-ddCbtSTehhCObZA4hhjms5A4IjciwmFbHSRyiU_PpAiTYIyF9ODjYe8eAvk6_ePDzd03HTUlWuboV_VbAes86ROmoK_3rfF0Ic5ykAAwDlU3oGBkBYZQKDpfkFuc3KEAgx7o__8-WtiJGaFV6dQpOPo9t56sP_Gty0G-5o31i-wwT-hGANVLRqgbpOw1k76O4D88rYtnNYs2UK1OL11OlrZ-kySXPOHIpBfftjwblYsAo7apc6XsO7tUlzQh3la94rayZkcGzv96_O8RDO8Pdu8LspbQ-nIXdx6Ho-09h4_OAFiLCYVU7yiUYczcOeJ3b9oAW7LRDOwkrruVVnk9BJ5c4u9--QUHjI4Lfq_qsXZRb0IiBhSK4Cq0lLICwC1mQYRnwkbBKnCuKuhgyWXw-ID-zr2t9DPxseF__FgTrUT23ahIQM5tZUWUR_5V
                 :width: 40 px
 
-Explore
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. TBD
-
-
-
-
-
-
 
 Create the diagram by connecting things together
 -------------------------------------------------------------------------------
@@ -218,26 +208,26 @@ Change the Layout to Vertical
 We want the diagram to be vertical, with the cloud at the bottom and the users at the top.
 
 .. tip ::
-    We use "-->" to connect the icons so they are arranged vertically
+    We use ``-->`` to connect the icons so they are arranged vertically
 
 We can specify a connection direction as follows:
 
 .. csv-table:: Tools Used
-    :header: "text", "Direction"
+    :header: "Text", "Direction"
     :widths: 10, 50
 
-    "->", "horizontal left to right"
-    "-->TODO", "vertical top to bottom"
-    "-up->", "vertical bottom to top"
-    "-down->", "vertical top to bottom" 
-    "-left->", "horizontal right to left"
-    "-right->", "horizontal left to right"
+    ``->``, "horizontal left to right"
+    ``-->``, "vertical top to bottom"
+    ``-up->``, "vertical bottom to top"
+    ``-down->``, "vertical top to bottom" 
+    ``-left->``, "horizontal right to left"
+    ``-right->``, "horizontal left to right"
 
 
 
 .. uml:: NetworkUsersMachines5.puml
     :align: center
-    :caption: *Use --> to connect vertically* 
+    :caption: *Vertical Layout* 
 
 Source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +266,7 @@ Here we use the together_ keyword.
 
 .. uml:: NetworkUsersMachines6.puml
     :align: center
-    :caption: *Use together keyword to group our icons* 
+    :caption: *Group our icons* 
 
 Source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -305,8 +295,8 @@ Explore
 Conclusion
 -------------------------------------------------------------------------------
 
+We went step-by-step through the creation of a network diagram. 
 
-.. todo::
+Looking at the source code for the diagram, there is very little redundant information. Most of the text appears in the diagram as text, the remainder is for the layout direction and the included icons.
 
-    Write up Conclusion
-    
+Now that we have a template diagram, producing variants of it is even quicker as we just need to edit the relevant lines of text.
