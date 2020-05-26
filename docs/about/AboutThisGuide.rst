@@ -62,9 +62,8 @@ In my professional role building products in the software industry, I tell my te
 
 This tweet illustrates this graphically:
 
-::
 
-    .. tweet:: https://twitter.com/UserOnboard/status/408372844876165120
+.. tweet:: https://twitter.com/UserOnboard/status/408372844876165120
 
 
 
