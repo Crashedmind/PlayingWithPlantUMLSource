@@ -311,7 +311,7 @@ This uses the image tag which is part of PlantUML creole_ Legacy HTML support pe
 
 .. tip ::
     
-    You can scale an image. In the diagram about we made it 1.5 times bigger using the ```scale``` keyword.
+    You can scale an image. In the diagram above, we made the image 0.5, and 1.5 times bigger using the ```scale``` keyword.
 
 Connect Images In A Diagram
 -------------------------------------------------------------------------------

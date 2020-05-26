@@ -64,7 +64,7 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
 |    :scale: 100%                                                             | 
 +-----------------------------------------------------------------------------+ 
 | This uses the Plantuml Stdlib Open Security Architecture icon set.          | 
-| We create this diagram in :ref:`Create a Diagram of a Typical Network`      | 
+| See :ref:`Create a Diagram of a Typical Network`                            | 
 +-----------------------------------------------------------------------------+ 
                            
 +-----------------------------------------------------------------------------+	
@@ -74,9 +74,21 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
 |    :scale: 100%                                                             | 
 +-----------------------------------------------------------------------------+                                    
 | This uses the AWSlib icon set.                                              |
-| We create this diagram in :ref:`Create Real Life AWS Diagrams`              | 
+| See :ref:`Create Real Life AWS Diagrams`                                    | 
 +-----------------------------------------------------------------------------+                                 
-                                                                 
+
+
++-----------------------------------------------------------------------------+	
+| **Diagram of a Kubernetes Architecture**                                    |
++-----------------------------------------------------------------------------+ 
+| .. uml:: kubernetes/k1.puml                                                 | 
+|    :scale: 100%                                                             | 
++-----------------------------------------------------------------------------+                                    
+| This uses the Azure and Kubernetes icon sets.                               |
+| See :ref:`Kubernetes`                                                       | 
++-----------------------------------------------------------------------------+          
+
+
 +--------------------------------------------------------------------------------------+	
 | **Diagram of a Global Widget Production System Using C4**                            | 
 +--------------------------------------------------------------------------------------+
@@ -84,7 +96,7 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
 |    :scale: 100%                                                                      | 
 +--------------------------------------------------------------------------------------+ 
 | This uses the :ref:`C4 Lightweight Software Architecture Description Method`.        | 
-| We create this diagram in :ref:`Using C4 To Architect ACME Global Widget Production` | 
+| See :ref:`Using C4 To Architect ACME Global Widget Production`                       | 
 +--------------------------------------------------------------------------------------+ 
 
 
@@ -119,6 +131,9 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
 
    NetworkUsersMachines/NetworkUsersMachines
    aws/aws
+   kubernetes/kubernetes
+   gcp/gcp
+   
    C4/c4acme
 
 .. toctree::
