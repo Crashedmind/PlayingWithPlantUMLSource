@@ -2,7 +2,7 @@
 Create A Sprite library
 ======================================================
 
-Create Sprites by converting TODO icon libaries
+Create Sprites by converting TODO icon libraries
 ----------------------------------------------------
 
 
