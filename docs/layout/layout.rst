@@ -47,7 +47,7 @@ We can specify a connection direction as follows and this affects the diagram la
 
 
 up down left right
--------------------------------------------------------------------------------
+===============================================================================
 .. uml:: arrows.puml
     :align: center
 
@@ -55,11 +55,9 @@ up down left right
     :linenos: 
 
 
-Orientation
-===============================================================================
 
 left to right direction
--------------------------------------------------------------------------------
+===============================================================================
 
 .. uml:: left2right.puml
     :align: center
@@ -69,7 +67,7 @@ left to right direction
 
 
 top to bottom direction
--------------------------------------------------------------------------------
+===============================================================================
 .. uml:: top2bottom.puml
     :align: center
 
@@ -78,7 +76,7 @@ top to bottom direction
 
 
 hidden
--------------------------------------------------------------------------------
+===============================================================================
 
 .. note ::
     Note that the location of E is determined by a hidden arrow. Whereas F is floating i.e. not connected by an arrow so it can go anywhere.
@@ -133,6 +131,7 @@ linetype polyline ortho
 ===============================================================================
 
 Either of the following can be added to a diagram:
+
 * "skinparam linetype polyline"
 * "skinparam linetype ortho"
 
@@ -141,7 +140,7 @@ See :ref:`Create Real Life AWS Diagrams` for practical examples of where these a
 
 .. _AWSExample: http://www.plantuml.com/plantuml/uml/VL1BRnD13BxFhp1x8KXa8mfS8bGrH1Ng0GbfUPmdCsxMYkV1F99MLVyxJfPLAhJailRuUtpstkIYKwcErIloXgj5-AGFcMcpMFtgri6vuAydiOvSPBedj6qK_GH9rB4MN6Zc_r5Ss11VP6pHOz9yYV8bXHhlJF3v1KkzpZloKIVjWCbZUOm8-vZD9103FnuVQW8BgVH1gQZDJcyH6haTrXogRU19tQwlPftJ5X_UGZCqq67Qay569j2yKSzA_SYOykpqbU6fZkZtf2qL2bxpKOTfjhAt3wRNVej2MLaONwFYw-cVpOOYiszrmvHxJA1ZX93WW9kHEoJ3t8Q3dr_3e5d2knP-KgQI_vh1FD6sBy8uXo_XgeMkw5H0LtFSK9t1is2uUGdlM_XC5XB-hfWBBAJBCVYCQc30dF6-lDZXWxZtuI29uvB_MdviuSv5ySaIBew6oUoaaiz5Cqk7U_G5diPGii_g1hsjZly0
 
-As at May 2020, it looks like there can issue using ortho. Specifically the label being too distant from the line.
+As at May 2020, it looks like there can be an issue using ortho. Specifically the label being too distant from the line.
 
 * In our AWSExample_ the label "4. Show Ad" is too far from the line to be useful.
 * issue seen by other users: https://forum.plantuml.net/1608/is-it-possible-to-only-use-straight-lines-in-a-class-diagram
