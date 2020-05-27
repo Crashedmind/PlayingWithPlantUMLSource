@@ -3,14 +3,14 @@
 
 !unquoted procedure $DrawColor($colour)
 
-skinparam rectangle {
-        backgroundColor<<$colour>> $colour
-        borderColor<<$colour>> $colour
-        shadowing<<$colour>> true
-        BorderThickness<<$colour>> 1
-    }
+    skinparam rectangle {
+            backgroundColor<<$colour>> $colour
+            borderColor<<$colour>> $colour
+            shadowing<<$colour>> true
+            BorderThickness<<$colour>> 1
+        }
 
-rectangle $colour <<$colour>> as "<color:$colour></color>"
+    rectangle $colour <<$colour>> as "<color:$colour></color>"
 
 !endprocedure
 
