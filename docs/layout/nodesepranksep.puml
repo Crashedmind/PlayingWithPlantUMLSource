@@ -1,0 +1,7 @@
+@startuml
+skinparam nodesep 10
+skinparam ranksep 20
+class Foo1
+class Foo2
+Foo3 *-- Foo1
+@enduml
