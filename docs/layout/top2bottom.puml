@@ -1,0 +1,20 @@
+@startuml
+
+'left to right direction
+top to bottom direction
+
+rectangle Arrows
+rectangle A
+rectangle B
+rectangle C
+rectangle D
+rectangle E
+rectangle F
+
+Arrows --> A 
+Arrows --> B
+Arrows --> C
+Arrows --> D
+Arrows --[hidden]> E
+
+@enduml

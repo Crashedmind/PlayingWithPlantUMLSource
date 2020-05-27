@@ -1,7 +1,7 @@
 @startuml
 
-'skinparam nodesep 10
-'skinparam ranksep 20
+'left to right direction
+'top to bottom direction
 
 rectangle Arrows
 rectangle A

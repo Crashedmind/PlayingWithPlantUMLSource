@@ -1,20 +1,20 @@
 @startuml
 
-'skinparam nodesep 10
-'skinparam ranksep 20
-
 rectangle Arrows
 rectangle A
 rectangle B
 rectangle C
+together {
 rectangle D
 rectangle E
+}
 rectangle F
 
+
 Arrows -[bold]-> A 
-Arrows -[#pink,dashed,thickness=10]-> B
 Arrows -[#DDFF00,dotted,bold]-> C
+Arrows -[#pink,dashed,thickness=10]-> B
 Arrows --> D
-E ---> C
+E ---------> C
 
 @enduml

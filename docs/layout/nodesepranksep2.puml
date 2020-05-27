@@ -1,7 +1,10 @@
 @startuml
 
+'left to right direction
+'top to bottom direction
+
 'skinparam nodesep 10
-'skinparam ranksep 20
+skinparam ranksep 150
 
 rectangle Arrows
 rectangle A
@@ -15,6 +18,8 @@ Arrows -[bold]-> A
 Arrows -[#pink,dashed,thickness=10]-> B
 Arrows -[#DDFF00,dotted,bold]-> C
 Arrows --> D
-E ---> C
+
+'long arrow for no good reason 
+E ---> C 
 
 @enduml

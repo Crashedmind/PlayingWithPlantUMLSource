@@ -1,6 +1,6 @@
 @startuml
 
-'skinparam nodesep 10
+skinparam nodesep 5
 'skinparam ranksep 20
 
 rectangle Arrows
