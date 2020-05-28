@@ -149,6 +149,7 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8BCACDEDDDCBACDCCBFFFFFFFFFFBBBB9ABCCCCC
 
 skinparam cloud {
 backgroundColor white
+
 }
 cloud marvin as "<color:gray><$marvin></color>"
 

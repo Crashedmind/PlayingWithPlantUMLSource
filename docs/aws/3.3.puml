@@ -11,6 +11,34 @@
 !include <awslib/ApplicationIntegration/all.puml>
 
 
+'rectangle alias <<alias>> as "
+'    VPCSubnetPublic(VPCSubnetPrivate, " ", " ") \n\n
+'    ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, " ", " ")
+'    "
+
+'rectangle "<color:D86613><$Analytics*.4>Private Subnet</color>\n <color:D86613><$Analytics></color>\nProxyInstance" as 2
+skinparam rectangle {
+    backgroundColor<<$alias>> gainsboro
+    borderColor<<$alias>> gainsboro
+    shadowing<<$alias>> false
+    
+}
+rectangle "<color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n <color:D86613><$ELBNetworkLoadBalancer></color>" 
+
+!unquoted procedure $MyBox($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="rectangle", $BoxSprite="", $Boxalias="", $Boxscale=0.4, $Boxcolour="blue" )
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> white
+        borderColor<<$alias>> black
+        shadowing<<$alias>> true
+    }
+    $shape $alias <<$alias>> as "<color:$Boxcolour><$BoxSprite*$Boxscale>$label</color>\n
+    <color:$colour><$MySprite></color>" 
+
+!endprocedure
+
+$MyBox($MySprite="$ELBNetworkLoadBalancer", $alias=myalias1, $label="Private Subnet", $colour="D86613", $BoxSprite="$VPCSubnetPrivate", $Boxcolour="3B48CC") 
+
 Appstream2_0(Appstream2_0, " ", " ")
 AutoScalingGroup(AutoScalingGroup, " ", " ")
 EC2Instance(EC2Instance, " ", " ")
@@ -26,5 +54,7 @@ VPCElasticNetworkInterface(VPCElasticNetworkInterface, " ", " ")
 ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, " ", " ")
 
 Cloudalt(Cloudalt, " ", " ")
+
+
 
 @enduml
