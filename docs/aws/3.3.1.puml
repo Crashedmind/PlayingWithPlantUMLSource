@@ -1,0 +1,77 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+'https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/GroupIcons/VPCSubnetPrivate.puml
+!unquoted procedure $MyBox($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="rectangle", $BoxSprite="", $Boxalias="", $Boxscale=0.4, $Boxcolour="white", $BoxBackgoundcolour="white", $Boxlabel="" )
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> $BoxBackgoundcolour
+        borderColor<<$alias>> $Boxcolour
+        shadowing<<$alias>> true
+    }
+    $shape $alias <<$alias>> as "<color:$Boxcolour><$BoxSprite*$Boxscale> $Boxlabel</color>\n
+    <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+'$MyBox($MySprite="$ELBNetworkLoadBalancer", $alias=myalias1, $label="", $colour="D86613", $BoxSprite="$VPCSubnetPrivate", $Boxcolour="3B48CC", $BoxBackgoundcolour="e6fbff", $Boxlabel="Private Subnet") 
+
+'$MyBox($MySprite="$EC2Instance", $alias=myalias2, $label="Proxy Instance", $colour="D86613", $BoxSprite="$VPCSubnetPublic", $Boxcolour="3F8624", $BoxBackgoundcolour="e6ffef", $Boxlabel="Public Subnet") 
+
+
+
+skinparam rectangle {
+    backgroundColor<<box1>> e6fbff
+    borderColor<<$box1>> e6fbff
+    shadowing<<$box1>> true
+    
+    backgroundColor<<box2>> e6ffef
+    borderColor<<$box2>> e6ffef
+    shadowing<<$box2>> true
+}
+
+
+
+rectangle box2 <<box2>> as "<color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
+    <color:D86613><$EC2Instance></color>\nProxy Instance" 
+
+rectangle box1 <<box1>> as "<color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
+    <color:D86613><$ELBNetworkLoadBalancer></color>\n" 
+
+
+package boxAZ1
+{
+
+    "<<$box1>>"
+}
+
+
+!unquoted procedure $remove()
+    Appstream2_0(Appstream2_0, " ", " ")
+    AutoScalingGroup(AutoScalingGroup, " ", " ")
+    EC2Instance(EC2Instance, " ", " ")
+    InternetAlt1(InternetAlt1, " ", " ")
+    DirectConnect(DirectConnect, " ", " ")
+    VPCVPNConnection(VPCVPNConnection, " ", " ")
+    VPCSubnetPublic(VPCSubnetPublic, " ", " ")
+    VPCSubnetPrivate(VPCSubnetPrivate, " ", " ")
+    VPCInternetGateway(VPCInternetGateway, " ", " ")
+    VPCCustomerGateway(VPCCustomerGateway, " ", " ")
+    TransitGateway(S3TransitGatewayStaging, " ", " ")
+    VPCElasticNetworkInterface(VPCElasticNetworkInterface, " ", " ")
+    ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, " ", " ")
+
+    Cloudalt(Cloudalt, " ", " ")
+!endprocedure
+
+
+@enduml

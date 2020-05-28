@@ -369,8 +369,16 @@ Add Text and Simplify The Icons
     :linenos: 
 
 
-Connect The Icons
+Draw Boxes
 -------------------------------------------------------------------------------
+
+
+.. uml:: 3.4.puml
+    :align: center
+    
+.. literalinclude:: ./3.4.puml
+    :linenos: 
+
 
 
 .. todo ::
