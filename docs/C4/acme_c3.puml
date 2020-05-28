@@ -2,7 +2,7 @@
 
 'AWS stuff here
 '================================
-!includeurl <aws/common>
+!includeurl <aws/common.puml>
 !includeurl <aws/SDKs/Java/Java.puml>
 !includeurl <aws/SDKs/Nodejs/Nodejs.puml>
 
@@ -40,28 +40,28 @@
 
 'Elastic stuff here
 '================================
-!define ELASTIC_PUML ./plantuml-elastic
+!define ELASTIC_PUML elastic
+!include <elastic/apm/apm.puml>
+!include <elastic/app_search/app_search.puml>
+!include <elastic/beats/beats.puml>
+!include <elastic/cloud/cloud.puml>
+!include <elastic/cloud_in_kubernetes/cloud_in_kubernetes.puml>
+!include <elastic/code_search/code_search.puml>
+!include <elastic/ece/ece.puml>
+!include <elastic/eck/eck.puml>
+!include <elastic/elasticsearch/elasticsearch.puml>
+!include <elastic/endpoint/endpoint.puml>
+!include <elastic/enterprise_search/enterprise_search.puml>
+!include <elastic/kibana/kibana.puml>
+!include <elastic/logging/logging.puml>
+!include <elastic/logstash/logstash.puml>
+!include <elastic/maps/maps.puml>
+!include <elastic/metrics/metrics.puml>
+!include <elastic/siem/siem.puml>
+!include <elastic/site_search/site_search.puml>
+!include <elastic/stack/stack.puml>
+!include <elastic/uptime/uptime.puml>
 
-!include ELASTIC_PUML/apm/apm.puml
-!include ELASTIC_PUML/app_search/app_search.puml
-!include ELASTIC_PUML/beats/beats.puml
-!include ELASTIC_PUML/cloud/cloud.puml
-!include ELASTIC_PUML/cloud_in_kubernetes/cloud_in_kubernetes.puml
-!include ELASTIC_PUML/code_search/code_search.puml
-!include ELASTIC_PUML/ece/ece.puml
-!include ELASTIC_PUML/eck/eck.puml
-!include ELASTIC_PUML/elastic_search/elastic_search.puml
-!include ELASTIC_PUML/endpoint/endpoint.puml
-!include ELASTIC_PUML/enterprise_search/enterprise_search.puml
-!include ELASTIC_PUML/kibana/kibana.puml
-!include ELASTIC_PUML/logging/logging.puml
-!include ELASTIC_PUML/logstash/logstash.puml
-!include ELASTIC_PUML/maps/maps.puml
-!include ELASTIC_PUML/metrics/metrics.puml
-!include ELASTIC_PUML/siem/siem.puml
-!include ELASTIC_PUML/site_search/site_search.puml
-!include ELASTIC_PUML/stack/stack.puml
-!include ELASTIC_PUML/uptime/uptime.puml
 
 
 'change color of selected background shape https://plantuml.com/deployment-diagram
@@ -100,7 +100,7 @@ package Elastic {
 
     'add "node", "component", "agent" etc... to change background shape per https://plantuml.com/deployment-diagram
     'default is agent 
-    ELASTIC_SEARCH(ElasticSearch, "Search and Analyze",database)
+    ELASTICSEARCH(ElasticSearch, "Search and Analyze",database)
     LOGSTASH(Logstash, "Parse and Transform",node)
     KIBANA(Kibana, "Visualize",agent) 
 }
