@@ -194,4 +194,9 @@ To submit a suggestion, create an issue on https://github.com/Crashedmind/PlantU
 These will be reviewed and ranked periodically, and then resolved.
  
 
-Hit the like (star) button and subscribe (watch) on https://github.com/Crashedmind/PlantUMLHitchhikersGuide
+|playbutton_kub1| **Hit the like (star) button and subscribe (watch)!**
+
+
+.. |playbutton_kub1| image:: ../play.png
+                :target: https://github.com/Crashedmind/PlantUMLHitchhikersGuide
+                :width: 40 px
