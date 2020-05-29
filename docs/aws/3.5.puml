@@ -1,0 +1,59 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+skinparam defaultTextAlignment center
+
+
+'/PlantUMLStdlib2.0/docs/C4/acme_c3.puml
+skinparam rectangle {
+    backgroundColor<<box1>> e6fbff
+    borderColor<<$box1>> e6fbff
+    shadowing<<$box1>> true
+    
+    backgroundColor<<box2>> e6ffef
+    borderColor<<$box2>> e6ffef
+    shadowing<<$box2>> true
+}
+
+
+
+rectangle box2 <<box2>> as "<color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
+    <color:D86613><$EC2Instance></color>\nProxy Instance" 
+
+rectangle box1 <<box1>> as "<color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
+    <color:D86613><$ELBNetworkLoadBalancer></color>\n" 
+
+
+box2 { box1}
+
+sprite $Cloud [64x64/16z] {
+xPG7SiKW30KN93uo8hd_RTCxnVXFfhDJ_JmhkXx-iDbiDjLByNglVAG84DJkAN4844LYW7XSrZF4_3PtDu5qSGetoD-A1VHI0GFx-LqYUa7tW3L9NlSJgTbE
+WdjEQUKi7Bm95GcmT1QPr8O5K3E5SkOhHoyDzduoyMG9DUAzs3__dgqWX3fVtUDKBtE_46U7u8dv2Zr0kDNXu8Jay-CrXUWZlRLRYlGBL26jDGVjFeYZMVg8
+6dh7cB2Hi7H98sNLByGs3DHLlnB-tu_ugk-z-Ulw_Xsz0pHarLToz-dcrU63TsFoaXu6ApMGuwp158NRg7A485CY11jNDmdCaLpd4_IMyitNncqscyqp
+}
+
+!define PUML_ENTITY(e_type,e_color,e_sprite,e_label,e_alias,e_stereo) e_type "<color:e_color><$e_sprite></color>\r e_label" as e_alias <<e_stereo>>
+
+!define AWSCLOUD(alias) PUML_ENTITY(cloud,#F58536,Cloud,alias,Cloud)
+
+!definelong AWSCLOUD(alias,label,e_type="cloud",e_color="#F58536",e_stereo="AWScloud",e_sprite="Cloud")
+PUML_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
+AWSCLOUD(aws)
+{
+    Appstream2_0(Appstream2_0, " ", " ")
+
+
+}
+
+@enduml
