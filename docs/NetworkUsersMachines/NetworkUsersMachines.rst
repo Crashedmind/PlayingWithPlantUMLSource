@@ -36,7 +36,7 @@ Example Network Diagram
                 :target: http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00
                 :width: 40 px
 
-.. uml:: NetworkUsersMachines6.puml
+.. uml:: NetworkUsersMachines7.puml
     :align: center
     :caption: *Here's one we made earlier - and you can too* 
 
@@ -289,6 +289,48 @@ Source
 .. literalinclude:: ./NetworkUsersMachines6.puml
     :linenos: 
     :emphasize-lines: 18, 24, 34
+
+
+Add a Legend Table
+-------------------------------------------------------------------------------
+
+A diagram Legend can be useful. 
+This example shows
+
+* how to create a table
+* how to add https://plantuml.com/openiconic sprites
+* how to add stdlib sprites and scale (*.4 in this example) and colour them.
+* how to change the table cell colour
+
+.. tip ::
+    openiconic sprites are referenced with a "**&**" e.g. "&box"    
+    stdlib sprites are referenced with a "**$**" e.g. "$osa_user_green_operations"    
+
+.. uml:: NetworkUsersMachines7.puml
+    :align: center
+    :caption: *Add a Legend* 
+
+Play
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|playbutton7| Press to play around with this diagram source online.
+
+.. |playbutton7| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/ZLR_Rjis4FwVJt7jrbKT6ZbEknypFADP0ZG1cjLO7EoV0G5DdIp24YcGL5nl6R3NsEljINP7odRY8444s2JlntSVlpih-U23TA5hQY5U55XgWs2zd981gX1QFneCd5pb2nsgRjvvTCgQW2RaoZQ34oTzXKMZJJ6OrjA4gujF1xP5ur5rJeUrTAhI0LNe71uTQChrWqRwW4wyq4RLNR4jDpYnJMDDtjB-eVEAAWzaNJ_YFfEkM4c7JuHSQA-US5-Ykq7tL80ET-35wnmkf5k3zY3X56-mfdixq0P2XJ1rjkXKW82ooU6IB9NamDz9ARloC3o4wGb8Kz07ZatXh2wWhQp1d95_iVC4V26DNEnWZvModGc-npsBi1IaDb1wkiKul-6pP-lv31RT6bQLXThQ9TdAW2uY-dZj73XZLk4Qg4K6cRcDVeDXPTqIgFblOv4RBObNgHskI8nDsBaXG8hD1JslWRlbHR0B9AU3lmI9UCt3SxrmYEQwsEYLiOPluIKlBsczgnkVjyA-VBEFmLOPj3K-uwjIC2-SHDUTzVcfgt3C8_eGWkPP6_J-kaaoPwGx9T4tvzuJcmrzCmZdRxuaSTCA7ropGByCjirQHId3duxouVS_viDyUCWGk_x7svxqd6hPSaeZztAEKbdLBtrqQdAcMrvOfBMHZLPmFkMuv8NXa0znVpzDfcbxaDTF8L7RJqmpagLbxr8n-6fEEdNGYtrqc1--Xq-porq3acIasQzfd4Il50julT8EQ-w2irsWEYjTwkFf_JeCrUVsf6WWC_gG_NDP4WpGWQFEQ4aHcndDDXloVZVCt_sG7xqdvkyUOghQTaKMlyctcUdxSKB4d_t1mGHQDG9lEqV5bIrmv-WbPg_IieO62os5eBcAxaPIOgcDDD6hJMctljJK4SG55B7sL98dExfJ3qPKpvHwqQKVW10fAqOazKHFuQufBMnXhOH8MDipiThkszrM2FgEfusCGcnsqHpbeh0Q5sWA0VJS_WmdjhQEDxDrYxoUebTEjymNRbCKZBt-4qV3uMGybsev-ketB2PHnDqp7h1hCXvmwEGscXHZZpXu_FLZBvPly_UK52CdL2cY5XYahdsUywjE-_I6zQ6ezHnywtJ0HvcTIhVyo1Kct8fdyTkb4Cl7NbrxD2FuZkQZT3uxQHOueQ5v5fKKpZoUVl_jiI7uvv2PTgwjcSoNPv7fmyVVpEsNkzMEWH3kTCO0oMIqilJPjGTDqG-QAAqDwE1LgMiqii7i3JXoeCE2HZvKiFcF16ZCFS_TgtwJlVd3p2g4CnrKLUabkl_--TV3nquN2C5k4yK7mkE_zlJy3m00
+                :width: 40 px
+
+Explore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Create a table for each device and color code it as static or dynamic IP.
+ 
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./NetworkUsersMachines7.puml
+    :linenos: 
+    :emphasize-lines: 66-72
+
 
 
 Conclusion
