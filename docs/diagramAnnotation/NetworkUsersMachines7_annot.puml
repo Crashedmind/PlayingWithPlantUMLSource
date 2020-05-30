@@ -33,7 +33,7 @@ osa_user_green_business_manager(Bob, "Bob", "Accounts team", "Manager")
 note left
   * Look at Bob
   * Here he is
-  ** Yes he really is  
+  ** Yes he really is
 end note
 }
 
@@ -64,8 +64,8 @@ Bob --> iphone: phone calls
 
 Ivan --> server: configuration
 
-iphone --> wifiAP
-android --> wifiAP
+iphone --> wifiAP: <$osa_wireless_network>
+android --> wifiAP: <$osa_wireless_network>
 wifiAP --> hub
 
 server --> hub
@@ -73,9 +73,10 @@ mac --> hub
 pc --> hub
 
 
-hub --> firewall
+hub --> firewall: <$osa_lightning>
 
-firewall --> cloud
+
+firewall --> cloud: <$osa_warning*2>
 
 
 legend
