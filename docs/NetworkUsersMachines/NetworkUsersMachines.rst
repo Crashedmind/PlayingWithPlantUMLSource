@@ -291,10 +291,12 @@ Source
     :emphasize-lines: 18, 24, 34
 
 
-Add a Legend Table
+Add a Legend Table and a Note
 -------------------------------------------------------------------------------
+We add a note ala "note left : Look at Bob" where the note instruction is on the line following Bob (the icon we want to put the note on).
 
 A diagram Legend can be useful. 
+
 This example shows
 
 * how to create a table
@@ -304,6 +306,7 @@ This example shows
 
 .. tip ::
     openiconic sprites are referenced with a "**&**" e.g. "&box"    
+    
     stdlib sprites are referenced with a "**$**" e.g. "$osa_user_green_operations"    
 
 .. uml:: NetworkUsersMachines7.puml
@@ -316,7 +319,7 @@ Play
 |playbutton7| Press to play around with this diagram source online.
 
 .. |playbutton7| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/ZLR_Rjis4FwVJt7jrbKT6ZbEknypFADP0ZG1cjLO7EoV0G5DdIp24YcGL5nl6R3NsEljINP7odRY8444s2JlntSVlpih-U23TA5hQY5U55XgWs2zd981gX1QFneCd5pb2nsgRjvvTCgQW2RaoZQ34oTzXKMZJJ6OrjA4gujF1xP5ur5rJeUrTAhI0LNe71uTQChrWqRwW4wyq4RLNR4jDpYnJMDDtjB-eVEAAWzaNJ_YFfEkM4c7JuHSQA-US5-Ykq7tL80ET-35wnmkf5k3zY3X56-mfdixq0P2XJ1rjkXKW82ooU6IB9NamDz9ARloC3o4wGb8Kz07ZatXh2wWhQp1d95_iVC4V26DNEnWZvModGc-npsBi1IaDb1wkiKul-6pP-lv31RT6bQLXThQ9TdAW2uY-dZj73XZLk4Qg4K6cRcDVeDXPTqIgFblOv4RBObNgHskI8nDsBaXG8hD1JslWRlbHR0B9AU3lmI9UCt3SxrmYEQwsEYLiOPluIKlBsczgnkVjyA-VBEFmLOPj3K-uwjIC2-SHDUTzVcfgt3C8_eGWkPP6_J-kaaoPwGx9T4tvzuJcmrzCmZdRxuaSTCA7ropGByCjirQHId3duxouVS_viDyUCWGk_x7svxqd6hPSaeZztAEKbdLBtrqQdAcMrvOfBMHZLPmFkMuv8NXa0znVpzDfcbxaDTF8L7RJqmpagLbxr8n-6fEEdNGYtrqc1--Xq-porq3acIasQzfd4Il50julT8EQ-w2irsWEYjTwkFf_JeCrUVsf6WWC_gG_NDP4WpGWQFEQ4aHcndDDXloVZVCt_sG7xqdvkyUOghQTaKMlyctcUdxSKB4d_t1mGHQDG9lEqV5bIrmv-WbPg_IieO62os5eBcAxaPIOgcDDD6hJMctljJK4SG55B7sL98dExfJ3qPKpvHwqQKVW10fAqOazKHFuQufBMnXhOH8MDipiThkszrM2FgEfusCGcnsqHpbeh0Q5sWA0VJS_WmdjhQEDxDrYxoUebTEjymNRbCKZBt-4qV3uMGybsev-ketB2PHnDqp7h1hCXvmwEGscXHZZpXu_FLZBvPly_UK52CdL2cY5XYahdsUywjE-_I6zQ6ezHnywtJ0HvcTIhVyo1Kct8fdyTkb4Cl7NbrxD2FuZkQZT3uxQHOueQ5v5fKKpZoUVl_jiI7uvv2PTgwjcSoNPv7fmyVVpEsNkzMEWH3kTCO0oMIqilJPjGTDqG-QAAqDwE1LgMiqii7i3JXoeCE2HZvKiFcF16ZCFS_TgtwJlVd3p2g4CnrKLUabkl_--TV3nquN2C5k4yK7mkE_zlJy3m00
+                :target: http://www.plantuml.com/plantuml/uml/ZLRTRkCs4xtdKypc-xRh51ivpgO_DLnZqmJO14YwHkEWDmK2cXnPX2LI8AbutMQ1laPVhq_I6Kgs4mS98a3YpyoSEJmp9lmnHEbZKvL2lD6O6ulWWfpG1XGnrc7OxtkvpEOc5isi2UYLin5jp9Ih-gTUXW9rPQpkJqffuytLvO6hqGPKZJTn9RqgJ4GL6uz71uPYGx-I8Q8NRunLPQCtwVgdhggSpMgQFpNUKEQ-BCjdpEVIwwNq-8BBbGdg1VCr-ZlqBpcO-01UlClWIleLc00Ipl0EIpgt1sCX5WWJxtIZ8aIKLGRNj5D8TloTb7BB08D3c9o2j9fUEB7QEwEXBfp5Z95_SRCM-4fQET_2dYZb6Xj3XtkUOCb9hQ7CP8DnSSVhmBiNKvWtArWM3ahd5hINH_G9CQHZPy0Hqm9NG2MooCnTibkCI-SNGCL_dvBS6GaISkDnIMAitIui0P9l9kXv1roj8AAR8naz_2L8n5jkdjkvHxItUgrNZpLy3tiyxD7uK3TURuJTsz_5u5qPZREXnqSbPnuuY8uxxUBRgi89j-XJ2EfdOp64swgLkKUwKn1zENOhTWVM5ODmh8i89UOHXd19YeACN3FnbGzFd8t29yVN61RHrRrQ4TJWfwDiyFsFsI0R73BqjY-I2gSTrrBM75B9dPYZbexgXiwxBNxFr3omU2ihAwFWOi9-hHK60rwa-UCmsNRXaxYkEudQRc3RExrss3bKShwPaNuDT4KuEimEZ-5oUhqj305zJGtpQzjcebEA1RnT6eybLyUx9bAUfSdDoUHn7eRgOZjIrAWzUcd_SvuJ3D22lSvfQ3tMlTjRJyZwtI3xy4DsT4pCFpp5LALhT2zzoRRkzST-GgJhuE1W3BKQGd2Df-JAQTmQEedPgemieK9jf13KESbSIGhCZPKsMOtDtSRM5dK8QG15h0Ebv8vFvhO6GyfdSpDlsX-646rKycZL4ns5Xrljm3kibH0jrcPDh3RpUZiLWhvfjPPHYFKiRIUvoAt4ELejW9xxd-7KbSxpPBggaSSp3CgRcld2VUi5es3-nE5WC1xDf5eC__SRwd4ISVkC-cmQZ_hiEhvFMugnX-my-lzp5ywtsJ459SynPKge6gCqPSWolW9DQ6_U47LfPX1gRo8-o-nC-iKdpZ3cKhoAtpQ4M3vtfUtGJE1Rci_I-UobdUEOckPLL3ftul7olRZ3Xk1VGsRI-BfaCbzUHQPp7tqpSryUPZi1GdXG6GiaapNAqRij3rhTDPh8dOleuMrkIhIomju-U3AWHqqj7mjO_rC1QlF0VVUsc_Js_x3J0k7SH5KKPe7-tx__2V2fCHeXkasW-4Xu_2-0dly0
                 :width: 40 px
 
 Explore
@@ -329,7 +332,7 @@ Source
 
 .. literalinclude:: ./NetworkUsersMachines7.puml
     :linenos: 
-    :emphasize-lines: 66-72
+    :emphasize-lines: 23, 66-72
 
 
 

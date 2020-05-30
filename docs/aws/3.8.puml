@@ -1,0 +1,142 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+'skinparam linetype polyline
+
+
+!unquoted procedure $PublicSubnet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> e6ffef
+        borderColor<<$alias>> e6ffef
+        shadowing<<$alias>> true
+    }
+    rectangle $alias <<$alias>> as "
+        <color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
+        <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+!unquoted procedure $PrivateSubnet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> e6fbff
+        borderColor<<$alias>> e6fbff
+        shadowing<<$alias>> true
+    }
+    
+    rectangle $alias <<$alias>> as "
+        <color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
+        <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+
+!unquoted procedure $VPCNet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> white
+        borderColor<<$alias>> e6fbff
+        shadowing<<$alias>> true
+    }
+    
+    rectangle $alias <<$alias>> as "
+        <color:3F8624><$VPC*.4></color> <color:grey>$label</color>\n
+        <color:$colour><$MySprite></color>\n$description" 
+
+!endprocedure
+
+'note the "=" denotes heading 1
+skinparam rectangle {
+        backgroundColor<<BBVA>> white
+        borderColor<<BBVA>> white
+        shadowing<<$alias>> false
+    }
+rectangle  BBVA <<BBVA>> as "
+        =<color:blue>BBVA</color>\n
+        \nAuthentication Service" 
+
+
+
+AutoScalingGroup(AutoScalingGroup1, "Auto Scaling Group", "")
+ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, "Network Load Balancer", " ")
+VPCInternetGateway(VPCInternetGateway, "Internet Gateway", " ")
+InternetAlt1(InternetAlt1, "Internet", " ")
+'VPCElasticNetworkInterface(VPCElasticNetworkInterface, " ", " ")
+
+VPCInternetGateway -u-> InternetAlt1
+VPCVPNConnection(VPCVPNConnection, "VPN\nConnection", " ")
+DirectConnect(DirectConnect, "Direct\nConnect", " ")
+TransitGateway(S3TransitGatewayStaging, "TransitGateway", " ")
+
+VPCCustomerGateway(VPCCustomerGateway, " ", " ")
+'Appstream2_0(Appstream2_0, " ", " ")
+Cloudalt(Cloudalt, " ", " ")
+User(User, "BBVA Employee", " ")
+
+
+'package "BBVA VPC 2"
+'{
+
+    'package "Availability Zone 1"
+    '{
+
+        $PublicSubnet($EC2Instance, EC2Instance1, $label="Proxy Instance",  $colour="D86613")
+
+        $PrivateSubnet($ELBNetworkLoadBalancer, ELBNetworkLoadBalancer1, $colour="D86613")
+
+        EC2Instance1 --[hidden]> ELBNetworkLoadBalancer1
+
+    '}
+
+
+    'package "Availability Zone 2"
+    '{
+
+        $PublicSubnet($EC2Instance, EC2Instance2, $label="Proxy Instance",  $colour="D86613")
+
+        $PrivateSubnet($ELBNetworkLoadBalancer, ELBNetworkLoadBalancer2, $colour="D86613")
+
+        EC2Instance2 --[hidden]> ELBNetworkLoadBalancer2
+
+    '}
+'}
+
+
+$VPCNet($VPCElasticNetworkInterface, VPCElasticNetworkInterface2, $label="BBVA VPC 1", $colour="purple")
+$VPCNet($Appstream2_0, Appstream2_02, $label="Appstream 2.0 VPC", $description="Appstream 2.0", $colour="purple")
+'$MyOnPrem($VPCCustomerGateway, $label="Customer Gateway")
+
+EC2Instance1 -r-> AutoScalingGroup1
+AutoScalingGroup1 -r-> EC2Instance2
+
+ELBNetworkLoadBalancer1 -r-> ELBNetworkLoadBalancer
+ELBNetworkLoadBalancer -r->ELBNetworkLoadBalancer2
+
+S3TransitGatewayStaging -u-> DirectConnect
+S3TransitGatewayStaging -u-> VPCVPNConnection
+S3TransitGatewayStaging -> EC2Instance1
+DirectConnect -u-> VPCCustomerGateway
+VPCVPNConnection -u-> VPCCustomerGateway
+
+Appstream2_02 -d-> VPCElasticNetworkInterface2 
+VPCElasticNetworkInterface2 -> S3TransitGatewayStaging
+
+
+User -d-> BBVA 
+BBVA -d-> Appstream2_02
+
+
+@enduml
+
+  
+    

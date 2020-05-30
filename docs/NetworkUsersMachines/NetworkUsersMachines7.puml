@@ -20,6 +20,7 @@ together {
 osa_user_green_developer(Mary, "Mary", "Product team", "Developer")
 osa_user_green_operations(Ivan, "Ivan", "IT Team", "Server Admin")
 osa_user_green_business_manager(Bob, "Bob", "Accounts team", "Manager")
+note left : Look at Bob
 }
 
 ' Devices

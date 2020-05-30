@@ -1,0 +1,69 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+
+!unquoted procedure $PublicSubnet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> e6ffef
+        borderColor<<$alias>> e6ffef
+        shadowing<<$alias>> true
+    }
+    rectangle $alias <<$alias>> as "
+        <color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
+        <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+!unquoted procedure $PrivateSubnet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> e6fbff
+        borderColor<<$alias>> e6fbff
+        shadowing<<$alias>> true
+    }
+    rectangle $alias <<$alias>> as "
+        <color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
+        <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+
+
+skinparam rectangle {
+    backgroundColor<<box1>> e6fbff
+    borderColor<<$box1>> e6fbff
+    shadowing<<$box1>> true
+    
+    backgroundColor<<box2>> e6ffef
+    borderColor<<$box2>> e6ffef
+    shadowing<<$box2>> true
+}
+
+package "AZ"
+{
+
+rectangle box2 <<box2>> as "<color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
+    <color:D86613><$EC2Instance></color>\nProxy Instance" 
+
+rectangle box1 <<box1>> as "<color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
+    <color:D86613><$ELBNetworkLoadBalancer></color>\n" 
+}
+
+
+
+$PublicSubnet($EC2Instance, EC2Instance, "Proxy Instance",  $colour="D86613")
+
+$PrivateSubnet($ELBNetworkLoadBalancer, ELBNetworkLoadBalancer, "Proxy Instance",  $colour="D86613")
+
+@enduml
+

@@ -1,0 +1,80 @@
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+!include <awslib/CustomerEngagement/all.puml>
+!include <awslib/NetworkingAndContentDelivery/all.puml>
+!include <awslib/EndUserComputing/all.puml>
+!include <awslib/ApplicationIntegration/all.puml>
+
+
+
+!unquoted procedure $PublicSubnet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> e6ffef
+        borderColor<<$alias>> e6ffef
+        shadowing<<$alias>> true
+    }
+    rectangle $alias <<$alias>> as "
+        <color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
+        <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+!unquoted procedure $PrivateSubnet($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="blue", $shape="", $textsize="18")
+
+    skinparam rectangle {
+        backgroundColor<<$alias>> e6fbff
+        borderColor<<$alias>> e6fbff
+        shadowing<<$alias>> true
+    }
+    
+    rectangle $alias <<$alias>> as "
+        <color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
+        <color:$colour><$MySprite></color>\n$label" 
+
+!endprocedure
+
+    'AutoScalingGroup(AutoScalingGroup, " ", " ")
+    
+    'VPCInternetGateway(VPCInternetGateway, " ", " ")
+
+
+'package "BBVA VPC 2"
+'{
+
+    
+
+
+
+    package "Availability Zone 1"
+    {
+
+        $PublicSubnet($EC2Instance, EC2Instance1, $label="Proxy Instance",  $colour="D86613")
+
+        $PrivateSubnet($ELBNetworkLoadBalancer, ELBNetworkLoadBalancer1, $colour="D86613")
+
+        EC2Instance1 --[hidden]> ELBNetworkLoadBalancer1
+
+    }
+
+
+    package "Availability Zone 2"
+    {
+
+        $PublicSubnet($EC2Instance, EC2Instance2, $label="Proxy Instance",  $colour="D86613")
+
+        $PrivateSubnet($ELBNetworkLoadBalancer, ELBNetworkLoadBalancer2, $colour="D86613")
+
+        EC2Instance2 --[hidden]> ELBNetworkLoadBalancer2
+
+    }
+'}
+'AutoScalingGroup(AutoScalingGroup, " ", " ")
+
+@enduml
+

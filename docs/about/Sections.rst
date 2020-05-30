@@ -16,7 +16,7 @@ Sections of the Guide
    :header: "Sections of the Guide"
    :widths: 15, 30
 
-    "**Introduction**", "Sets context for PlantUML and this ."
+    "**Introduction**", "Sets context for PlantUML and this guide."
     "**Using Standard Library**", "Examples of what PlantUMLStdlib_ can do and how it does it."
     "**PlantUML Features**", "Details on the relevant PlantUML features for drawing diagrams. Some of these are lesser known or undocumented."
     "**Understanding Standard Library**", "My notes and experiments from trying to understand PlantUMLStdlib._"

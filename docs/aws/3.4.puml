@@ -21,12 +21,13 @@ skinparam rectangle {
     shadowing<<$box2>> true
 }
 
-
+package "AZ"
+{
 
 rectangle box2 <<box2>> as "<color:3F8624><$VPCSubnetPublic*.4> Public Subnet</color>\n
     <color:D86613><$EC2Instance></color>\nProxy Instance" 
 
 rectangle box1 <<box1>> as "<color:3B48CC><$VPCSubnetPrivate*.4> Private Subnet</color>\n
     <color:D86613><$ELBNetworkLoadBalancer></color>\n" 
-
+}
 @enduml
