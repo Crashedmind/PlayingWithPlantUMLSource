@@ -7,7 +7,5 @@
 !include GCPPuml/Compute/all.puml
 !include GCPPuml/Databases/all.puml
 
-AI_Hub(AI_Hub, "label", "tech")
-
-'listsprites
+listsprites
 @enduml

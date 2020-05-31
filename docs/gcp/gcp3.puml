@@ -1,0 +1,50 @@
+@startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+!include GCPPuml/Compute/Cloud_Functions.puml
+!include GCPPuml/Networking/Cloud_Firewall_Rules.puml
+!include GCPPuml/Compute/Compute_Engine.puml
+!include GCPPuml/Storage/Cloud_Storage.puml
+
+/'
+The other icons will need to come from other stdlib libraries: backup, users, clients.
+'/
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+
+
+Users(Users, "Friends", " ")
+Mobile(Mobile, "", " ")
+Client(Client, "Kid / Owner", " ")
+Client(ClientMinecraft, "", " ")
+
+Cloud_Functions(Cloud_FunctionsStart, "Start Server", "Cloud Functions")
+Cloud_Functions(Cloud_FunctionsStop, "Stop Server", "Cloud Functions")
+Cloud_Functions(Cloud_FunctionAdd, "Add a Friend", "Cloud Functions")
+
+Compute_Engine(Compute_Engine, "MineCraft Server", "Compute Engine")
+
+Cloud_Storage(Cloud_Storage, "MineCraft Backups", "Cloud Storage")
+
+Cloud_Firewall_Rules(Cloud_Firewall_Rules_Starter,"Minecraft Backups", "Cloud Firewall Rules")
+Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,"Minecraft Backups", "Cloud Firewall Rules")
+
+
+
+Client -> Cloud_FunctionsStart
+Client -> Cloud_FunctionsStop
+Users -> Cloud_FunctionAdd
+
+Cloud_FunctionsStart -> Cloud_Firewall_Rules_Starter
+Cloud_FunctionAdd -> Cloud_Firewall_Rules_Friend
+
+Cloud_FunctionsStart -> Compute_Engine
+Cloud_FunctionsStop -> Compute_Engine
+Compute_Engine -> Cloud_Storage
+
+
+
+@enduml
