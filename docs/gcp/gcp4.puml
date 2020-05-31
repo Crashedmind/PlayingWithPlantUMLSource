@@ -28,8 +28,8 @@ package "Kid / Owner" {
 }
 
 package "MinecraftClients" {
-    Mobile(Mobile, "", " ")
     Client(ClientMinecraft, "", " ")
+    Mobile(Mobile, "", " ")
 }
 
 package "Minecraft Project" {
@@ -76,7 +76,7 @@ Client -r-> Cloud_FunctionsStop
 Users -r-> Cloud_FunctionAdd
 
 
-MinecraftClients -r-> Cloud_Firewall_Rules_Friend
+ClientMinecraft -r-> Cloud_Firewall_Rules_Friend
 
 Backup -u-> Compute_Engine
 @enduml
