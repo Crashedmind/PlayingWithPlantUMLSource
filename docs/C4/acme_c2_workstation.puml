@@ -12,7 +12,7 @@ title Container Diagram for ACME Widget Workstation
 
 
 System_Boundary(WorkStation, "Workstation") {
-    Person(VfiOperator, Operator , "<$user> \n On-site Operator who produces Widget" )
+    Person(AcmeOperator, Operator , "<$user> \n On-site Operator who produces Widget" )
 
     System(WorkStationPC, "WorkStation PC", "Drives the Production process. \nProvides feedback to operator. \nConnects to central Production system")    
 
@@ -23,7 +23,7 @@ System_Boundary(WorkStation, "Workstation") {
     System(UnitN, "UnitN", "Widget N")    
 }
 
-Rel_R(VfiOperator, WorkStationPC, "Checks Production status")
+Rel_R(AcmeOperator, WorkStationPC, "Checks Production status")
 Rel_D(WorkStationPC, Hub, "Drive Production and Info Retrieval")
 Rel(Hub, Unit1, "Connect")
 Rel(Hub, Unit2, "Connect")
