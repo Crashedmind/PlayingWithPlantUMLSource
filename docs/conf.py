@@ -121,3 +121,12 @@ source_suffix = ['.rst', '.md']
 source_parsers = {
 	'.md': CommonMarkParser,
 }
+
+#Google Analytics
+def setup(app):
+    # (create a setup() function if you don't already have one;
+    # or add to the existing setup() ...)
+    app.add_js_file("https://www.googletagmanager.com/gtag/js?id=UA-168177985-1")
+    app.add_js_file("google_analytics_tracker.js")
+
+    
