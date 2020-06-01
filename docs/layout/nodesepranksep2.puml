@@ -16,7 +16,7 @@ rectangle F
 
 Arrows -[bold]-> A 
 Arrows -[#pink,dashed,thickness=10]-> B
-Arrows -[#DDFF00,dotted,bold]-> C
+Arrows -[#4567ff,dotted]-> C
 Arrows --> D
 
 'long arrow for no good reason 

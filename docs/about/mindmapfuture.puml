@@ -1,0 +1,35 @@
+@startmindmap
+<style>
+mindmapDiagram {
+   :depth(0) {
+    BackGroundColor #BDE3ee
+    LineColor #BDE3ee
+  }
+   :depth(1) {
+    BackGroundColor #BDE3FF
+    LineColor #BDE3FF
+  }
+   :depth(2) {
+    BackGroundColor #BDE3dd
+    LineColor #BDE3dd
+  }
+}
+</style>
+* Future
+** A Showcase Template Site
+** Hyperlinked Interactive Diagrams
+*** Demo of this
+** Machine Processing Of Text Files
+*** Automated feedback to the user
+*** Auto creation of PlantUML source code from an image via optical recognition
+** Architecture Icon Sets
+** Security Modeling
+*** Data flows
+*** Threat models
+** Github Actions and Workflows
+*** Automated creation of icon sets
+*** Automated build of documentation
+** Guide for PlantUML Diagrams
+** Interactive Notebook Guide
+
+@endmindmap

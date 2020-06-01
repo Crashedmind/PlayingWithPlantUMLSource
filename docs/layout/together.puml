@@ -12,7 +12,7 @@ rectangle F
 
 
 Arrows -[bold]-> A 
-Arrows -[#DDFF00,dotted,bold]-> C
+Arrows -[#4567ff,dotted]-> C
 Arrows -[#pink,dashed,thickness=10]-> B
 Arrows --> D
 E ---------> C
